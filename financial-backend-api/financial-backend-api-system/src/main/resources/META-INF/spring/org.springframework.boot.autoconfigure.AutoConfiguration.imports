@@ -1,0 +1,3 @@
+com.financial.system.api.factory.RemoteUserFallbackFactory
+com.financial.system.api.factory.RemoteLogFallbackFactory
+com.financial.system.api.factory.RemoteFileFallbackFactory
