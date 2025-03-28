@@ -10,18 +10,16 @@ import com.financial.common.core.exception.UtilException;
 /**
  * 提供通用唯一识别码（universally unique identifier）（UUID）实现
  *
- * @author ruoyi
+ * @author xinyi
  */
-public final class UUID implements java.io.Serializable, Comparable<UUID>
-{
+public final class UUID implements java.io.Serializable, Comparable<UUID> {
     private static final long serialVersionUID = -1185015143654744140L;
 
     /**
      * SecureRandom 的单例
      *
      */
-    private static class Holder
-    {
+    private static class Holder {
         static final SecureRandom numberGenerator = getSecureRandom();
     }
 
@@ -36,8 +34,7 @@ public final class UUID implements java.io.Serializable, Comparable<UUID>
      * 
      * @param data 数据
      */
-    private UUID(byte[] data)
-    {
+    private UUID(byte[] data) {
         long msb = 0;
         long lsb = 0;
         assert data.length == 16 : "data must be 16 bytes in length";
@@ -59,8 +56,7 @@ public final class UUID implements java.io.Serializable, Comparable<UUID>
      * @param mostSigBits 用于 {@code UUID} 的最高有效 64 位
      * @param leastSigBits 用于 {@code UUID} 的最低有效 64 位
      */
-    public UUID(long mostSigBits, long leastSigBits)
-    {
+    public UUID(long mostSigBits, long leastSigBits) {
         this.mostSigBits = mostSigBits;
         this.leastSigBits = leastSigBits;
     }
@@ -196,8 +192,7 @@ public final class UUID implements java.io.Serializable, Comparable<UUID>
      *
      * @return 此 {@code UUID} 的版本号
      */
-    public int version()
-    {
+    public int version() {
         // Version is bits masked by 0x000000000000F000 in MS long
         return (int) ((mostSigBits >> 12) & 0x0f);
     }
@@ -215,8 +210,7 @@ public final class UUID implements java.io.Serializable, Comparable<UUID>
      *
      * @return 此 {@code UUID} 相关联的变体号
      */
-    public int variant()
-    {
+    public int variant() {
         // This field is composed of a varying number of bits.
         // 0 - - Reserved for NCS backward compatibility
         // 1 0 - The IETF aka Leach-Salz variant (used by this class)
@@ -238,8 +232,7 @@ public final class UUID implements java.io.Serializable, Comparable<UUID>
      *
      * @throws UnsupportedOperationException 如果此 {@code UUID} 不是 version 为 1 的 UUID。
      */
-    public long timestamp() throws UnsupportedOperationException
-    {
+    public long timestamp() throws UnsupportedOperationException {
         checkTimeBase();
         return (mostSigBits & 0x0FFFL) << 48//
                 | ((mostSigBits >> 16) & 0x0FFFFL) << 32//
@@ -259,8 +252,7 @@ public final class UUID implements java.io.Serializable, Comparable<UUID>
      *
      * @throws UnsupportedOperationException 如果此 UUID 的 version 不为 1
      */
-    public int clockSequence() throws UnsupportedOperationException
-    {
+    public int clockSequence() throws UnsupportedOperationException {
         checkTimeBase();
         return (int) ((leastSigBits & 0x3FFF000000000000L) >>> 48);
     }
@@ -278,8 +270,7 @@ public final class UUID implements java.io.Serializable, Comparable<UUID>
      *
      * @throws UnsupportedOperationException 如果此 UUID 的 version 不为 1
      */
-    public long node() throws UnsupportedOperationException
-    {
+    public long node() throws UnsupportedOperationException {
         checkTimeBase();
         return leastSigBits & 0x0000FFFFFFFFFFFFL;
     }

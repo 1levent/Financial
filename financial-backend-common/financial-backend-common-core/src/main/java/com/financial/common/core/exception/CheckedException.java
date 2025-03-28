@@ -3,7 +3,7 @@ package com.financial.common.core.exception;
 /**
  * 检查异常
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class CheckedException extends RuntimeException
 {

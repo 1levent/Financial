@@ -7,7 +7,7 @@ import com.financial.common.core.constant.Constants;
 /**
  * VelocityEngine工厂
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class VelocityInitializer
 {

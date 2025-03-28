@@ -7,14 +7,12 @@ import feign.RequestInterceptor;
 /**
  * Feign 配置注册
  *
- * @author ruoyi
+ * @author xinyi
  **/
 @Configuration
-public class FeignAutoConfiguration
-{
+public class FeignAutoConfiguration {
     @Bean
-    public RequestInterceptor requestInterceptor()
-    {
+    public RequestInterceptor requestInterceptor() {
         return new FeignRequestInterceptor();
     }
 }

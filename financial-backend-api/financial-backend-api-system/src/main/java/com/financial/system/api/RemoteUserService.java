@@ -17,11 +17,10 @@ import com.financial.system.api.model.LoginUser;
 /**
  * 用户服务
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @FeignClient(contextId = "remoteUserService", value = ServiceNameConstants.SYSTEM_SERVICE, fallbackFactory = RemoteUserFallbackFactory.class)
-public interface RemoteUserService
-{
+public interface RemoteUserService {
     /**
      * 通过用户名查询用户信息
      *

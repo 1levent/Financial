@@ -16,10 +16,9 @@ import com.financial.gen.domain.GenTableColumn;
 /**
  * 模板工具类
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class VelocityUtils
-{
+public class VelocityUtils {
     /** 项目空间路径 */
     private static final String PROJECT_PATH = "main/java";
 
@@ -73,16 +72,14 @@ public class VelocityUtils
         return velocityContext;
     }
 
-    public static void setMenuVelocityContext(VelocityContext context, GenTable genTable)
-    {
+    public static void setMenuVelocityContext(VelocityContext context, GenTable genTable) {
         String options = genTable.getOptions();
         JSONObject paramsObj = JSON.parseObject(options);
         String parentMenuId = getParentMenuId(paramsObj);
         context.put("parentMenuId", parentMenuId);
     }
 
-    public static void setTreeVelocityContext(VelocityContext context, GenTable genTable)
-    {
+    public static void setTreeVelocityContext(VelocityContext context, GenTable genTable) {
         String options = genTable.getOptions();
         JSONObject paramsObj = JSON.parseObject(options);
         String treeCode = getTreecode(paramsObj);
@@ -103,8 +100,7 @@ public class VelocityUtils
         }
     }
 
-    public static void setSubVelocityContext(VelocityContext context, GenTable genTable)
-    {
+    public static void setSubVelocityContext(VelocityContext context, GenTable genTable) {
         GenTable subTable = genTable.getSubTable();
         String subTableName = genTable.getSubTableName();
         String subTableFkName = genTable.getSubTableFkName();
@@ -127,8 +123,7 @@ public class VelocityUtils
      * @param tplWebType 前端类型
      * @return 模板列表
      */
-    public static List<String> getTemplateList(String tplCategory, String tplWebType)
-    {
+    public static List<String> getTemplateList(String tplCategory, String tplWebType) {
         String useWebType = "vm/vue";
         if ("element-plus".equals(tplWebType))
         {
@@ -162,8 +157,7 @@ public class VelocityUtils
     /**
      * 获取文件名
      */
-    public static String getFileName(String template, GenTable genTable)
-    {
+    public static String getFileName(String template, GenTable genTable) {
         // 文件名称
         String fileName = "";
         // 包路径

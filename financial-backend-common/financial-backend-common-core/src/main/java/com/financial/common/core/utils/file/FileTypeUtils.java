@@ -9,10 +9,9 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * 文件类型工具类
  *
- * @author ruoyi
+ * @author xinyi
  */
-public class FileTypeUtils
-{
+public class FileTypeUtils {
     /**
      * 获取文件类型
      * <p>

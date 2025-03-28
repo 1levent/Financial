@@ -21,7 +21,7 @@ import com.financial.job.domain.SysJob;
 /**
  * 定时任务工具类
  * 
- * @author ruoyi
+ * @author xinyi
  *
  */
 public class ScheduleUtils

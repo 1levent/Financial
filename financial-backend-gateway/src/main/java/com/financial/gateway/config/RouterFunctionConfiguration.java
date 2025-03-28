@@ -1,6 +1,6 @@
 package com.financial.gateway.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -12,18 +12,17 @@ import com.financial.gateway.handler.ValidateCodeHandler;
 /**
  * 路由配置信息
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @Configuration
 public class RouterFunctionConfiguration
 {
-    @Autowired
+    @Resource
     private ValidateCodeHandler validateCodeHandler;
 
     @SuppressWarnings("rawtypes")
     @Bean
-    public RouterFunction routerFunction()
-    {
+    public RouterFunction routerFunction() {
         return RouterFunctions.route(
                 RequestPredicates.GET("/code").and(RequestPredicates.accept(MediaType.TEXT_PLAIN)),
                 validateCodeHandler);

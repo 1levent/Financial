@@ -7,10 +7,9 @@ import com.financial.common.core.web.domain.AjaxResult;
 /**
  * 验证码处理
  *
- * @author ruoyi
+ * @author xinyi
  */
-public interface ValidateCodeService
-{
+public interface ValidateCodeService {
     /**
      * 生成验证码
      */

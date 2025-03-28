@@ -1,4 +1,4 @@
-package main.java.com.financial.common.sensitive.annotation;
+package com.financial.common.sensitive.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -12,13 +12,12 @@ import com.financial.common.sensitive.enums.DesensitizedType;
 /**
  * 数据脱敏注解
  *
- * @author ruoyi
+ * @author xinyi
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 @JacksonAnnotationsInside
 @JsonSerialize(using = SensitiveJsonSerializer.class)
-public @interface Sensitive
-{
+public @interface Sensitive {
     DesensitizedType desensitizedType();
 }

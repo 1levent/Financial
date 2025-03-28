@@ -9,13 +9,12 @@ import org.springframework.context.annotation.Configuration;
 /**
  * XSS跨站脚本配置
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @Configuration
 @RefreshScope
 @ConfigurationProperties(prefix = "security.xss")
-public class XssProperties
-{
+public class XssProperties {
     /**
      * Xss开关
      */

@@ -70,18 +70,38 @@
             <artifactId>kaptcha</artifactId>
         </dependency>
 
-        <!-- RuoYi Common Redis-->
+        <!-- Common Redis-->
         <dependency>
             <groupId>com.financial</groupId>
             <artifactId>financial-common-redis</artifactId>
         </dependency>
 
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-webflux</artifactId>-->
+<!--        </dependency>-->
+
         <!-- Springdoc -->
         <dependency>
             <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-webflux-ui</artifactId>
-            <version>${springdoc.version}</version>
+            <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
+<!--            <version>${springdoc.version}</version>-->
         </dependency>
+
+
+<!--        &lt;!&ndash; knife4j &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.xiaoymin</groupId>-->
+<!--            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>-->
+<!--            <version>4.5.0</version>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.springdoc</groupId>-->
+<!--                    <artifactId>springdoc-openapi-webmvc-core</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
 
     </dependencies>
 

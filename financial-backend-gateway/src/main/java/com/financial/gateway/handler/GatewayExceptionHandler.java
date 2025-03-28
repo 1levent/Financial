@@ -15,21 +15,18 @@ import reactor.core.publisher.Mono;
 /**
  * 网关统一异常处理
  *
- * @author ruoyi
+ * @author xinyi
  */
 @Order(-1)
 @Configuration
-public class GatewayExceptionHandler implements ErrorWebExceptionHandler
-{
+public class GatewayExceptionHandler implements ErrorWebExceptionHandler {
     private static final Logger log = LoggerFactory.getLogger(GatewayExceptionHandler.class);
 
     @Override
-    public Mono<Void> handle(ServerWebExchange exchange, Throwable ex)
-    {
+    public Mono<Void> handle(ServerWebExchange exchange, Throwable ex) {
         ServerHttpResponse response = exchange.getResponse();
 
-        if (exchange.getResponse().isCommitted())
-        {
+        if (exchange.getResponse().isCommitted()) {
             return Mono.error(ex);
         }
 

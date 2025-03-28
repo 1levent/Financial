@@ -1,8 +1,9 @@
 package com.financial.file.controller;
 
+import jakarta.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -14,14 +15,14 @@ import com.financial.system.api.domain.SysFile;
 /**
  * 文件请求处理
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @RestController
 public class SysFileController
 {
     private static final Logger log = LoggerFactory.getLogger(SysFileController.class);
 
-    @Autowired
+    @Resource
     private ISysFileService sysFileService;
 
     /**

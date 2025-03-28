@@ -8,10 +8,9 @@ import com.financial.common.core.web.page.TableSupport;
 /**
  * 分页工具类
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class PageUtils extends PageHelper
-{
+public class PageUtils extends PageHelper {
     /**
      * 设置请求分页数据
      */

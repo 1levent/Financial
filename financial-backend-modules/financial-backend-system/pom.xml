@@ -47,29 +47,52 @@
             <artifactId>mysql-connector-j</artifactId>
         </dependency>
         
-        <!-- RuoYi Common DataSource -->
+        <!-- Common DataSource -->
         <dependency>
             <groupId>com.financial</groupId>
             <artifactId>financial-common-datasource</artifactId>
         </dependency>
         
-        <!-- RuoYi Common DataScope -->
+        <!-- Common DataScope -->
         <dependency>
             <groupId>com.financial</groupId>
             <artifactId>financial-common-datascope</artifactId>
         </dependency>
+
+        <!-- api-system -->
+        <dependency>
+            <groupId>com.financial</groupId>
+            <artifactId>financial-api-system</artifactId>
+        </dependency>
         
-        <!-- RuoYi Common Log -->
+        <!-- Common Log -->
         <dependency>
             <groupId>com.financial</groupId>
             <artifactId>financial-common-log</artifactId>
         </dependency>
-        
-        <!-- RuoYi Common Swagger -->
+
+        <!-- lombok -->
         <dependency>
-            <groupId>com.financial</groupId>
-            <artifactId>financial-common-swagger</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
+
+        <!-- mybatis-plus -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.baomidou</groupId>-->
+<!--            <artifactId>mybatis-plus-generator</artifactId>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+        </dependency>
+
 
     </dependencies>
 

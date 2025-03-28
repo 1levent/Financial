@@ -7,16 +7,14 @@ import com.financial.common.security.interceptor.HeaderInterceptor;
 /**
  * 拦截器配置
  *
- * @author ruoyi
+ * @author xinyi
  */
-public class WebMvcConfig implements WebMvcConfigurer
-{
+public class WebMvcConfig implements WebMvcConfigurer {
     /** 不需要拦截地址 */
     public static final String[] excludeUrls = { "/login", "/logout", "/refresh" };
 
     @Override
-    public void addInterceptors(InterceptorRegistry registry)
-    {
+    public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(getHeaderInterceptor())
                 .addPathPatterns("/**")
                 .excludePathPatterns(excludeUrls)
@@ -26,8 +24,7 @@ public class WebMvcConfig implements WebMvcConfigurer
     /**
      * 自定义请求头拦截器
      */
-    public HeaderInterceptor getHeaderInterceptor()
-    {
+    public HeaderInterceptor getHeaderInterceptor() {
         return new HeaderInterceptor();
     }
 }

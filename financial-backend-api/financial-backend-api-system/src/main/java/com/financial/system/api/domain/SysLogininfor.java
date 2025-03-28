@@ -1,5 +1,8 @@
 package com.financial.system.api.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import java.io.Serial;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.financial.common.core.annotation.Excel;
@@ -9,12 +12,13 @@ import com.financial.common.core.web.domain.BaseEntity;
 /**
  * 系统访问记录表 sys_logininfor
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class SysLogininfor extends BaseEntity
-{
+public class SysLogininfor extends BaseEntity {
+    @Serial
     private static final long serialVersionUID = 1L;
 
+    @TableId(type = IdType.AUTO)
     /** ID */
     @Excel(name = "序号", cellType = ColumnType.NUMERIC)
     private Long infoId;

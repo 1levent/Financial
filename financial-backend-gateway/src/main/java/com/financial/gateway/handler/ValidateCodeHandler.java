@@ -1,7 +1,8 @@
 package com.financial.gateway.handler;
 
+import jakarta.annotation.Resource;
 import java.io.IOException;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;
@@ -16,24 +17,19 @@ import reactor.core.publisher.Mono;
 /**
  * 验证码获取
  *
- * @author ruoyi
+ * @author xinyi
  */
 @Component
-public class ValidateCodeHandler implements HandlerFunction<ServerResponse>
-{
-    @Autowired
+public class ValidateCodeHandler implements HandlerFunction<ServerResponse> {
+    @Resource
     private ValidateCodeService validateCodeService;
 
     @Override
-    public Mono<ServerResponse> handle(ServerRequest serverRequest)
-    {
+    public Mono<ServerResponse> handle(ServerRequest serverRequest) {
         AjaxResult ajax;
-        try
-        {
+        try {
             ajax = validateCodeService.createCaptcha();
-        }
-        catch (CaptchaException | IOException e)
-        {
+        } catch (CaptchaException | IOException e) {
             return Mono.error(e);
         }
         return ServerResponse.status(HttpStatus.OK).body(BodyInserters.fromValue(ajax));

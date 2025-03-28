@@ -3,7 +3,7 @@ package com.financial.common.log.enums;
 /**
  * 操作状态
  * 
- * @author ruoyi
+ * @author xinyi
  *
  */
 public enum BusinessStatus

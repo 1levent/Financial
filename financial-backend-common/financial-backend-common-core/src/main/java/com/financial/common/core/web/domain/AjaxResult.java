@@ -8,10 +8,9 @@ import com.financial.common.core.utils.StringUtils;
 /**
  * 操作消息提醒
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class AjaxResult extends HashMap<String, Object>
-{
+public class AjaxResult extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;
 
     /** 状态码 */

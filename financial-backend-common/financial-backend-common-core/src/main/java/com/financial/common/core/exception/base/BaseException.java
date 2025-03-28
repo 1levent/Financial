@@ -3,7 +3,7 @@ package com.financial.common.core.exception.base;
 /**
  * 基础异常
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class BaseException extends RuntimeException
 {

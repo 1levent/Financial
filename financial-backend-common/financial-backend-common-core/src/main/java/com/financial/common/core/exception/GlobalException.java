@@ -3,7 +3,7 @@ package com.financial.common.core.exception;
 /**
  * 全局异常
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class GlobalException extends RuntimeException
 {

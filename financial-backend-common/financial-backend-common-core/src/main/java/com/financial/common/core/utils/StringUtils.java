@@ -10,10 +10,9 @@ import com.financial.common.core.text.StrFormatter;
 /**
  * 字符串工具类
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class StringUtils extends org.apache.commons.lang3.StringUtils
-{
+public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /** 空字符串 */
     private static final String NULLSTR = "";
 

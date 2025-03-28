@@ -1,5 +1,8 @@
 package com.financial.system.api.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import java.io.Serial;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.financial.common.core.annotation.Excel;
@@ -9,12 +12,13 @@ import com.financial.common.core.web.domain.BaseEntity;
 /**
  * 操作日志记录表 oper_log
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class SysOperLog extends BaseEntity
-{
+public class SysOperLog extends BaseEntity {
+    @Serial
     private static final long serialVersionUID = 1L;
 
+    @TableId(type = IdType.AUTO)
     /** 日志主键 */
     @Excel(name = "操作序号", cellType = ColumnType.NUMERIC)
     private Long operId;
@@ -45,10 +49,6 @@ public class SysOperLog extends BaseEntity
     /** 操作人员 */
     @Excel(name = "操作人员")
     private String operName;
-
-    /** 部门名称 */
-    @Excel(name = "部门名称")
-    private String deptName;
 
     /** 请求url */
     @Excel(name = "请求地址")
@@ -163,15 +163,6 @@ public class SysOperLog extends BaseEntity
         this.operName = operName;
     }
 
-    public String getDeptName()
-    {
-        return deptName;
-    }
-
-    public void setDeptName(String deptName)
-    {
-        this.deptName = deptName;
-    }
 
     public String getOperUrl()
     {

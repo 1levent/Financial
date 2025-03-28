@@ -3,10 +3,9 @@ package com.financial.common.core.utils.uuid;
 /**
  * ID生成器工具类
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class IdUtils
-{
+public class IdUtils {
     /**
      * 获取随机UUID
      * 

@@ -7,7 +7,7 @@ import com.financial.gen.domain.GenTable;
 /**
  * 业务 服务层
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public interface IGenTableService
 {

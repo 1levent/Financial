@@ -23,11 +23,15 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
         
-        <!-- RuoYi Common Core-->
+        <!-- Common Core-->
         <dependency>
             <groupId>com.financial</groupId>
             <artifactId>financial-common-core</artifactId>
         </dependency>
-        
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+        </dependency>
+
     </dependencies>
 </project>

@@ -1,12 +1,12 @@
 package com.financial.common.redis.service;
 
+import jakarta.annotation.Resource;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.BoundSetOperations;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -16,13 +16,12 @@ import org.springframework.stereotype.Component;
 /**
  * spring redis 工具类
  * 
- * @author ruoyi
+ * @author xinyi
  **/
 @SuppressWarnings(value = { "unchecked", "rawtypes" })
 @Component
-public class RedisService
-{
-    @Autowired
+public class RedisService {
+    @Resource
     public RedisTemplate redisTemplate;
 
     /**
@@ -31,8 +30,7 @@ public class RedisService
      * @param key 缓存的键值
      * @param value 缓存的值
      */
-    public <T> void setCacheObject(final String key, final T value)
-    {
+    public <T> void setCacheObject(final String key, final T value) {
         redisTemplate.opsForValue().set(key, value);
     }
 
@@ -71,7 +69,7 @@ public class RedisService
      */
     public boolean expire(final String key, final long timeout, final TimeUnit unit)
     {
-        return redisTemplate.expire(key, timeout, unit);
+        return Boolean.TRUE.equals(redisTemplate.expire(key, timeout, unit));
     }
 
     /**
@@ -136,8 +134,7 @@ public class RedisService
      * @param dataList 待缓存的List数据
      * @return 缓存的对象
      */
-    public <T> long setCacheList(final String key, final List<T> dataList)
-    {
+    public <T> long setCacheList(final String key, final List<T> dataList) {
         Long count = redisTemplate.opsForList().rightPushAll(key, dataList);
         return count == null ? 0 : count;
     }

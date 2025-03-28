@@ -5,7 +5,7 @@ import com.financial.common.core.exception.base.BaseException;
 /**
  * 文件信息异常类
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class FileException extends BaseException
 {

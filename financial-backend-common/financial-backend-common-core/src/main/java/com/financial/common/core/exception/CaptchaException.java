@@ -3,7 +3,7 @@ package com.financial.common.core.exception;
 /**
  * 验证码错误异常类
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class CaptchaException extends RuntimeException
 {

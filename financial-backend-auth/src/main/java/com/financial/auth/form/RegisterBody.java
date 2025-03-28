@@ -3,9 +3,8 @@ package com.financial.auth.form;
 /**
  * 用户注册对象
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class RegisterBody extends LoginBody
-{
+public class RegisterBody extends LoginBody {
 
 }

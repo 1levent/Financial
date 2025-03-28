@@ -1,8 +1,9 @@
 package com.financial.job.controller;
 
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletResponse;
 import java.util.List;
-import javax.servlet.http.HttpServletResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,13 +23,13 @@ import com.financial.job.service.ISysJobLogService;
 /**
  * 调度日志操作处理
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @RestController
 @RequestMapping("/job/log")
 public class SysJobLogController extends BaseController
 {
-    @Autowired
+    @Resource
     private ISysJobLogService jobLogService;
 
     /**

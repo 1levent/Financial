@@ -1,5 +1,8 @@
 package com.financial.common.core.utils;
 
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -8,10 +11,7 @@ import java.util.Collections;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -30,15 +30,13 @@ import reactor.core.publisher.Mono;
 /**
  * 客户端工具类
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class ServletUtils
-{
+public class ServletUtils {
     /**
      * 获取String参数
      */
-    public static String getParameter(String name)
-    {
+    public static String getParameter(String name) {
         return getRequest().getParameter(name);
     }
 
@@ -100,8 +98,7 @@ public class ServletUtils
      * @param request 请求对象{@link ServletRequest}
      * @return Map
      */
-    public static Map<String, String> getParamMap(ServletRequest request)
-    {
+    public static Map<String, String> getParamMap(ServletRequest request) {
         Map<String, String> params = new HashMap<>();
         for (Map.Entry<String, String[]> entry : getParams(request).entrySet())
         {
@@ -113,14 +110,10 @@ public class ServletUtils
     /**
      * 获取request
      */
-    public static HttpServletRequest getRequest()
-    {
-        try
-        {
+    public static jakarta.servlet.http.HttpServletRequest getRequest() {
+        try {
             return getRequestAttributes().getRequest();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             return null;
         }
     }
@@ -128,8 +121,7 @@ public class ServletUtils
     /**
      * 获取response
      */
-    public static HttpServletResponse getResponse()
-    {
+    public static HttpServletResponse getResponse() {
         try
         {
             return getRequestAttributes().getResponse();
@@ -148,37 +140,28 @@ public class ServletUtils
         return getRequest().getSession();
     }
 
-    public static ServletRequestAttributes getRequestAttributes()
-    {
-        try
-        {
+    public static ServletRequestAttributes getRequestAttributes() {
+        try {
             RequestAttributes attributes = RequestContextHolder.getRequestAttributes();
             return (ServletRequestAttributes) attributes;
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             return null;
         }
     }
 
-    public static String getHeader(HttpServletRequest request, String name)
-    {
+    public static String getHeader(HttpServletRequest request, String name) {
         String value = request.getHeader(name);
-        if (StringUtils.isEmpty(value))
-        {
+        if (StringUtils.isEmpty(value)) {
             return StringUtils.EMPTY;
         }
         return urlDecode(value);
     }
 
-    public static Map<String, String> getHeaders(HttpServletRequest request)
-    {
+    public static Map<String, String> getHeaders(HttpServletRequest request) {
         Map<String, String> map = new LinkedCaseInsensitiveMap<>();
         Enumeration<String> enumeration = request.getHeaderNames();
-        if (enumeration != null)
-        {
-            while (enumeration.hasMoreElements())
-            {
+        if (enumeration != null) {
+            while (enumeration.hasMoreElements()) {
                 String key = enumeration.nextElement();
                 String value = request.getHeader(key);
                 map.put(key, value);
@@ -193,17 +176,13 @@ public class ServletUtils
      * @param response 渲染对象
      * @param string 待渲染的字符串
      */
-    public static void renderString(HttpServletResponse response, String string)
-    {
-        try
-        {
+    public static void renderString(HttpServletResponse response, String string) {
+        try {
             response.setStatus(200);
             response.setContentType("application/json");
             response.setCharacterEncoding("utf-8");
             response.getWriter().print(string);
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -211,13 +190,12 @@ public class ServletUtils
     /**
      * 是否是Ajax异步请求
      * 
-     * @param request
+     * @param request 请求对象
      */
     public static boolean isAjaxRequest(HttpServletRequest request)
     {
         String accept = request.getHeader("accept");
-        if (accept != null && accept.contains("application/json"))
-        {
+        if (accept != null && accept.contains("application/json")) {
             return true;
         }
 
@@ -322,8 +300,7 @@ public class ServletUtils
      * @param value 响应内容
      * @return Mono<Void>
      */
-    public static Mono<Void> webFluxResponseWriter(ServerHttpResponse response, String contentType, HttpStatus status, Object value, int code)
-    {
+    public static Mono<Void> webFluxResponseWriter(ServerHttpResponse response, String contentType, HttpStatus status, Object value, int code) {
         response.setStatusCode(status);
         response.getHeaders().add(HttpHeaders.CONTENT_TYPE, contentType);
         R<?> result = R.fail(code, value.toString());

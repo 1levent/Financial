@@ -3,7 +3,7 @@ package com.financial.common.core.constant;
 /**
  * 任务调度通用常量
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class ScheduleConstants
 {

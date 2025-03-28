@@ -7,10 +7,9 @@ import com.financial.common.core.utils.StringUtils;
 /**
  * 字符集工具类
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class CharsetKit
-{
+public class CharsetKit {
     /** ISO-8859-1 */
     public static final String ISO_8859_1 = "ISO-8859-1";
     /** UTF-8 */

@@ -1,5 +1,6 @@
 package com.financial.system.api.model;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Set;
 import com.financial.system.api.domain.SysUser;
@@ -7,10 +8,10 @@ import com.financial.system.api.domain.SysUser;
 /**
  * 用户信息
  *
- * @author ruoyi
+ * @author xinyi
  */
-public class LoginUser implements Serializable
-{
+public class LoginUser implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     /**

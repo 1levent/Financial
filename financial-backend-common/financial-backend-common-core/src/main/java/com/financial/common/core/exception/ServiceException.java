@@ -3,7 +3,7 @@ package com.financial.common.core.exception;
 /**
  * 业务异常
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public final class ServiceException extends RuntimeException
 {

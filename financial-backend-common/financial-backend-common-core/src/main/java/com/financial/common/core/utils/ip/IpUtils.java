@@ -1,18 +1,17 @@
 package com.financial.common.core.utils.ip;
 
+import jakarta.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import javax.servlet.http.HttpServletRequest;
 import com.financial.common.core.utils.ServletUtils;
 import com.financial.common.core.utils.StringUtils;
 
 /**
  * 获取IP方法
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class IpUtils
-{
+public class IpUtils {
     public final static String REGX_0_255 = "(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d|\\d)";
     // 匹配 ip
     public final static String REGX_IP = "((" + REGX_0_255 + "\\.){3}" + REGX_0_255 + ")";

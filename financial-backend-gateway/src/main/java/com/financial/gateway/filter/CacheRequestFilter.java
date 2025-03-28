@@ -15,11 +15,10 @@ import reactor.core.publisher.Mono;
 /**
  * 获取body请求数据（解决流不能重复读取问题）
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @Component
-public class CacheRequestFilter extends AbstractGatewayFilterFactory<CacheRequestFilter.Config>
-{
+public class CacheRequestFilter extends AbstractGatewayFilterFactory<CacheRequestFilter.Config> {
     public CacheRequestFilter()
     {
         super(Config.class);
@@ -32,26 +31,21 @@ public class CacheRequestFilter extends AbstractGatewayFilterFactory<CacheReques
     }
 
     @Override
-    public GatewayFilter apply(Config config)
-    {
+    public GatewayFilter apply(Config config) {
         CacheRequestGatewayFilter cacheRequestGatewayFilter = new CacheRequestGatewayFilter();
         Integer order = config.getOrder();
-        if (order == null)
-        {
+        if (order == null) {
             return cacheRequestGatewayFilter;
         }
         return new OrderedGatewayFilter(cacheRequestGatewayFilter, order);
     }
 
-    public static class CacheRequestGatewayFilter implements GatewayFilter
-    {
+    public static class CacheRequestGatewayFilter implements GatewayFilter {
         @Override
-        public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain)
-        {
+        public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
             // GET DELETE 不过滤
             HttpMethod method = exchange.getRequest().getMethod();
-            if (method == null || method == HttpMethod.GET || method == HttpMethod.DELETE)
-            {
+            if (method == null || method == HttpMethod.GET || method == HttpMethod.DELETE) {
                 return chain.filter(exchange);
             }
             return ServerWebExchangeUtils.cacheRequestBodyAndRequest(exchange, (serverHttpRequest) -> {
@@ -70,8 +64,7 @@ public class CacheRequestFilter extends AbstractGatewayFilterFactory<CacheReques
         return Collections.singletonList("order");
     }
 
-    static class Config
-    {
+    static class Config {
         private Integer order;
 
         public Integer getOrder()

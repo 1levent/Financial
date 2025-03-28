@@ -12,22 +12,18 @@ import com.financial.system.api.domain.SysFile;
 /**
  * 文件服务降级处理
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @Component
-public class RemoteFileFallbackFactory implements FallbackFactory<RemoteFileService>
-{
+public class RemoteFileFallbackFactory implements FallbackFactory<RemoteFileService> {
     private static final Logger log = LoggerFactory.getLogger(RemoteFileFallbackFactory.class);
 
     @Override
-    public RemoteFileService create(Throwable throwable)
-    {
+    public RemoteFileService create(Throwable throwable) {
         log.error("文件服务调用失败:{}", throwable.getMessage());
-        return new RemoteFileService()
-        {
+        return new RemoteFileService() {
             @Override
-            public R<SysFile> upload(MultipartFile file)
-            {
+            public R<SysFile> upload(MultipartFile file) {
                 return R.fail("上传文件失败:" + throwable.getMessage());
             }
         };

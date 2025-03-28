@@ -8,7 +8,7 @@ import com.financial.common.security.annotation.EnableFinancialFeignClients;
 /**
  * 定时任务
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @EnableCustomConfig
 @EnableFinancialFeignClients

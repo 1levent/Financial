@@ -3,7 +3,7 @@ package com.financial.common.core.constant;
 /**
  * Token的Key常量
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class TokenConstants
 {

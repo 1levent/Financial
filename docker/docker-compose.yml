@@ -1,4 +1,3 @@
-version : '3.8'
 services:
   financial-backend-nacos:
     container_name: financial-backend-nacos
@@ -18,26 +17,27 @@ services:
       - financial-backend-mysql
   financial-backend-mysql:
     container_name: financial-backend-mysql
-    image: mysql:5.7
+    image: mysql
     build:
       context: ./mysql
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - ./mysql/conf:/etc/mysql/conf.d
       - ./mysql/logs:/logs
       - ./mysql/data:/var/lib/mysql
     command: [
           'mysqld',
-          '--innodb-buffer-pool-size=80M',
+          '--innodb-buffer-pool-size=256M',
           '--character-set-server=utf8mb4',
           '--collation-server=utf8mb4_unicode_ci',
           '--default-time-zone=+8:00',
           '--lower-case-table-names=1'
         ]
     environment:
-      MYSQL_DATABASE: 'ry-cloud'
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: 'financial-backend'
+      MYSQL_ROOT_PASSWORD: wydxb030513
+      MYSQL_ROOT_HOST: '%'
   financial-backend-redis:
     container_name: financial-backend-redis
     image: redis
@@ -49,92 +49,79 @@ services:
       - ./redis/conf/redis.conf:/home/financial-backend/redis/redis.conf
       - ./redis/data:/data
     command: redis-server /home/financial-backend/redis/redis.conf
-  financial-backend-nginx:
-    container_name: financial-backend-nginx
-    image: nginx
-    build:
-      context: ./nginx
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx/html/dist:/home/financial-backend/projects/financial-backend-ui
-      - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/logs:/var/log/nginx
-      - ./nginx/conf.d:/etc/nginx/conf.d
-    depends_on:
-      - financial-backend-gateway
-    links:
-      - financial-backend-gateway
+#  financial-backend-nginx:
+#    container_name: financial-backend-nginx
+#    image: nginx
+#    build:
+#      context: ./nginx
+#    ports:
+#      - "80:80"
+#    volumes:
+#      - ./nginx/html/dist:/home/financial-backend/projects/financial-backend-ui
+#      - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf
+#      - ./nginx/logs:/var/log/nginx
+#      - ./nginx/conf.d:/etc/nginx/conf.d
+#    depends_on:
+#      - financial-backend-gateway
   financial-backend-gateway:
     container_name: financial-backend-gateway
     build:
-      context: ./financial-backend/gateway
+      context: ./financial/gateway
       dockerfile: dockerfile
     ports:
       - "8080:8080"
     depends_on:
       - financial-backend-redis
-    links:
-      - financial-backend-redis
   financial-backend-auth:
     container_name: financial-backend-auth
     build:
-      context: ./financial-backend/auth
+      context: ./financial/auth
       dockerfile: dockerfile
     ports:
       - "9200:9200"
     depends_on:
       - financial-backend-redis
-    links:
-      - financial-backend-redis
-  financial-backend-modules-system:
-    container_name: financial-backend-modules-system
-    build:
-      context: ./financial-backend/modules/system
-      dockerfile: dockerfile
-    ports:
-      - "9201:9201"
-    depends_on:
-      - financial-backend-redis
-      - financial-backend-mysql
-    links:
-      - financial-backend-redis
-      - financial-backend-mysql
-  financial-backend-modules-gen:
-    container_name: financial-backend-modules-gen
-    build:
-      context: ./financial-backend/modules/gen
-      dockerfile: dockerfile
-    ports:
-      - "9202:9202"
-    depends_on:
-      - financial-backend-mysql
-    links:
-      - financial-backend-mysql
-  financial-backend-modules-job:
-    container_name: financial-backend-modules-job
-    build:
-      context: ./financial-backend/modules/job
-      dockerfile: dockerfile
-    ports:
-      - "9203:9203"
-    depends_on:
-      - financial-backend-mysql
-    links:
-      - financial-backend-mysql
-  financial-backend-modules-file:
-    container_name: financial-backend-modules-file
-    build:
-      context: ./financial-backend/modules/file
-      dockerfile: dockerfile
-    ports:
-      - "9300:9300"
-    volumes:
-    - ./financial-backend/uploadPath:/home/financial-backend/uploadPath
-  financial-backend-visual-monitor:
-    container_name: financial-backend-visual-monitor
-    build:
-      context: ./financial-backend/visual/monitor
-      dockerfile: dockerfile
-    ports:
-      - "9100:9100"
+#  financial-backend-modules-system:
+#    container_name: financial-backend-modules-system
+#    build:
+#      context: ./financial/modules/system
+#      dockerfile: dockerfile
+#    ports:
+#      - "9201:9201"
+#    depends_on:
+#      - financial-backend-redis
+#      - financial-backend-mysql
+#  financial-backend-modules-gen:
+#    container_name: financial-backend-modules-gen
+#    build:
+#      context: ./financial/modules/gen
+#      dockerfile: dockerfile
+#    ports:
+#      - "9202:9202"
+#    depends_on:
+#      - financial-backend-mysql
+#  financial-backend-modules-job:
+#    container_name: financial-backend-modules-job
+#    build:
+#      context: ./financial/modules/job
+#      dockerfile: dockerfile
+#    ports:
+#      - "9203:9203"
+#    depends_on:
+#      - financial-backend-mysql
+#  financial-backend-modules-file:
+#    container_name: financial-backend-modules-file
+#    build:
+#      context: ./financial/modules/file
+#      dockerfile: dockerfile
+#    ports:
+#      - "9300:9300"
+#    volumes:
+#    - ./financial-backend/uploadPath:/home/financial-backend/uploadPath
+#  financial-backend-visual-monitor:
+#    container_name: financial-backend-visual-monitor
+#    build:
+#      context: ./financial/visual/monitor
+#      dockerfile: dockerfile
+#    ports:
+#      - "9100:9100"

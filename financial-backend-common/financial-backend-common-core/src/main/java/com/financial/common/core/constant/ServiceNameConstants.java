@@ -3,7 +3,7 @@ package com.financial.common.core.constant;
 /**
  * 服务名称
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class ServiceNameConstants
 {

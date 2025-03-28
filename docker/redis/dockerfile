@@ -1,13 +1,11 @@
 # 基础镜像
-FROM redis
-# author
-MAINTAINER ruoyi
+FROM redis:7.2.4-alpine
 
 # 挂载目录
-VOLUME /home/ruoyi/redis
+VOLUME /home/financial-backend/redis
 # 创建目录
-RUN mkdir -p /home/ruoyi/redis
+RUN mkdir -p /home/financial-backend/redis
 # 指定路径
-WORKDIR /home/ruoyi/redis
+WORKDIR /home/financial-backend/redis
 # 复制conf文件到路径
-COPY ./conf/redis.conf /home/ruoyi/redis/redis.conf
+COPY ./conf/redis.conf /home/financial-backend/redis/redis.conf

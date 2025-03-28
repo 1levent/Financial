@@ -1,8 +1,8 @@
 package com.financial.job.domain;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import java.util.Date;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -16,7 +16,7 @@ import com.financial.job.util.CronUtils;
 /**
  * 定时任务调度表 sys_job
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class SysJob extends BaseEntity
 {

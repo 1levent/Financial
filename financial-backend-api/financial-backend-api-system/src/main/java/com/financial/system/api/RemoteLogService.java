@@ -14,11 +14,10 @@ import com.financial.system.api.factory.RemoteLogFallbackFactory;
 /**
  * 日志服务
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @FeignClient(contextId = "remoteLogService", value = ServiceNameConstants.SYSTEM_SERVICE, fallbackFactory = RemoteLogFallbackFactory.class)
-public interface RemoteLogService
-{
+public interface RemoteLogService {
     /**
      * 保存系统日志
      *

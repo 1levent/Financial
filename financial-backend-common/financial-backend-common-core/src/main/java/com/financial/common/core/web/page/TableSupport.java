@@ -6,10 +6,9 @@ import com.financial.common.core.utils.ServletUtils;
 /**
  * 表格数据处理
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class TableSupport
-{
+public class TableSupport {
     /**
      * 当前记录起始索引
      */

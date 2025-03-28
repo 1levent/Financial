@@ -13,7 +13,6 @@
         <module>financial-backend-common-core</module>
         <module>financial-backend-common-redis</module>
         <module>financial-backend-common-seata</module>
-        <module>financial-backend-common-swagger</module>
         <module>financial-backend-common-security</module>
         <module>financial-backend-common-sensitive</module>
         <module>financial-backend-common-datascope</module>
@@ -26,5 +25,20 @@
     <description>
         financial-backend-common通用模块
     </description>
+
+    <dependencies>
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.9.22.1</version>
+        </dependency>
+
+    </dependencies>
 
 </project>

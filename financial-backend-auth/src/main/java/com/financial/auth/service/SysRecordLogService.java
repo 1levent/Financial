@@ -1,6 +1,6 @@
 package com.financial.auth.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Component;
 import com.financial.common.core.constant.Constants;
 import com.financial.common.core.constant.SecurityConstants;
@@ -12,12 +12,11 @@ import com.financial.system.api.domain.SysLogininfor;
 /**
  * 记录日志方法
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @Component
-public class SysRecordLogService
-{
-    @Autowired
+public class SysRecordLogService {
+    @Resource
     private RemoteLogService remoteLogService;
 
     /**
@@ -28,19 +27,15 @@ public class SysRecordLogService
      * @param message 消息内容
      * @return
      */
-    public void recordLogininfor(String username, String status, String message)
-    {
+    public void recordLogininfor(String username, String status, String message) {
         SysLogininfor logininfor = new SysLogininfor();
         logininfor.setUserName(username);
         logininfor.setIpaddr(IpUtils.getIpAddr());
         logininfor.setMsg(message);
         // 日志状态
-        if (StringUtils.equalsAny(status, Constants.LOGIN_SUCCESS, Constants.LOGOUT, Constants.REGISTER))
-        {
+        if (StringUtils.equalsAny(status, Constants.LOGIN_SUCCESS, Constants.LOGOUT, Constants.REGISTER)) {
             logininfor.setStatus(Constants.LOGIN_SUCCESS_STATUS);
-        }
-        else if (Constants.LOGIN_FAIL.equals(status))
-        {
+        } else if (Constants.LOGIN_FAIL.equals(status)) {
             logininfor.setStatus(Constants.LOGIN_FAIL_STATUS);
         }
         remoteLogService.saveLogininfor(logininfor, SecurityConstants.INNER);

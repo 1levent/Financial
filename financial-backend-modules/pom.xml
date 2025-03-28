@@ -13,7 +13,6 @@
         <module>financial-backend-gen</module>
         <module>financial-backend-job</module>
         <module>financial-backend-file</module>
-        <module>financial-backend-manage</module>
     </modules>
 
     <artifactId>financial-modules</artifactId>
@@ -22,5 +21,26 @@
     <description>
         financial-backend-modules业务模块
     </description>
+
+    <dependencies>
+<!--        &lt;!&ndash; knife4j &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.xiaoymin</groupId>-->
+<!--            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>-->
+<!--            <version>4.5.0</version>-->
+<!--&lt;!&ndash;            <exclusions>&ndash;&gt;-->
+<!--&lt;!&ndash;                <exclusion>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <groupId>org.springdoc</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <artifactId>springdoc-openapi-webmvc-core</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                </exclusion>&ndash;&gt;-->
+<!--&lt;!&ndash;            </exclusions>&ndash;&gt;-->
+<!--        </dependency>-->
+
+        <!-- web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

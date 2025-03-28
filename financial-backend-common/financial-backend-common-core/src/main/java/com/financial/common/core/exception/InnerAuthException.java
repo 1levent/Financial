@@ -3,7 +3,7 @@ package com.financial.common.core.exception;
 /**
  * 内部认证异常
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class InnerAuthException extends RuntimeException
 {

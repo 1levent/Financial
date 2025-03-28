@@ -1,15 +1,14 @@
-package main.java.com.financial.common.sensitive.enums;
+package com.financial.common.sensitive.enums;
 
+import com.financial.common.sensitive.utils.DesensitizedUtil;
 import java.util.function.Function;
-import main.java.com.financial.common.sensitive.utils.DesensitizedUtil;
 
 /**
  * 脱敏类型
  *
- * @author ruoyi
+ * @author xinyi
  */
-public enum DesensitizedType
-{
+public enum DesensitizedType {
     /**
      * 姓名，第2位星号替换
      */

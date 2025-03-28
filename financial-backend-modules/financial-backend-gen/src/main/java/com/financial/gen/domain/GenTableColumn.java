@@ -1,13 +1,13 @@
 package com.financial.gen.domain;
 
-import javax.validation.constraints.NotBlank;
 import com.financial.common.core.utils.StringUtils;
 import com.financial.common.core.web.domain.BaseEntity;
+import jakarta.validation.constraints.NotBlank;
 
 /**
  * 代码生成业务字段表 gen_table_column
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class GenTableColumn extends BaseEntity
 {

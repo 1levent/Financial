@@ -6,7 +6,7 @@ import com.financial.common.core.utils.StringUtils;
 /**
  * 定时任务调度测试
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @Component("ryTask")
 public class RyTask

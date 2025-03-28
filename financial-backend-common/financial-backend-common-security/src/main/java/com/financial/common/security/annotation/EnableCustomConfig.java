@@ -13,6 +13,10 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import com.financial.common.security.config.ApplicationConfig;
 import com.financial.common.security.feign.FeignAutoConfiguration;
 
+/**
+ * 自定义注解，添加该注解在启动类上，则启动类会加载自定义的配置，
+ * @author xinyi
+ */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
@@ -25,7 +29,6 @@ import com.financial.common.security.feign.FeignAutoConfiguration;
 @EnableAsync
 // 自动加载类
 @Import({ ApplicationConfig.class, FeignAutoConfiguration.class })
-public @interface EnableCustomConfig
-{
+public @interface EnableCustomConfig {
 
 }

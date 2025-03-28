@@ -3,7 +3,7 @@ package com.financial.common.log.enums;
 /**
  * 业务操作类型
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public enum BusinessType
 {

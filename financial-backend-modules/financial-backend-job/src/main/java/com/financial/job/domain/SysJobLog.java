@@ -9,7 +9,7 @@ import com.financial.common.core.web.domain.BaseEntity;
 /**
  * 定时任务调度日志表 sys_job_log
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class SysJobLog extends BaseEntity
 {

@@ -3,7 +3,7 @@ package com.financial.common.core.constant;
 /**
  * 代码生成通用常量
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class GenConstants
 {

@@ -18,7 +18,7 @@ import com.financial.job.service.ISysJobLogService;
 /**
  * 抽象quartz调用
  *
- * @author ruoyi
+ * @author xinyi
  */
 public abstract class AbstractQuartzJob implements Job
 {

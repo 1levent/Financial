@@ -22,17 +22,23 @@
             <artifactId>spring-webmvc</artifactId>
         </dependency>
 
-        <!-- RuoYi Api System -->
+        <!-- Api System -->
         <dependency>
             <groupId>com.financial</groupId>
             <artifactId>financial-api-system</artifactId>
         </dependency>
 
-        <!-- RuoYi Common Redis-->
+        <!-- Common Redis-->
         <dependency>
             <groupId>com.financial</groupId>
             <artifactId>financial-common-redis</artifactId>
         </dependency>
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>3.0.4</version>
+        <scope>compile</scope>
+      </dependency>
 
     </dependencies>
 

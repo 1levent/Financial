@@ -1,8 +1,8 @@
 package com.financial.gen.domain;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
 import java.util.List;
-import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
 import org.apache.commons.lang3.ArrayUtils;
 import com.financial.common.core.constant.GenConstants;
 import com.financial.common.core.utils.StringUtils;
@@ -11,7 +11,7 @@ import com.financial.common.core.web.domain.BaseEntity;
 /**
  * 业务表 gen_table
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class GenTable extends BaseEntity
 {

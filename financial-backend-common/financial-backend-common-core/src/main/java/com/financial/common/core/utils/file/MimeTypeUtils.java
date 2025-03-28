@@ -3,10 +3,9 @@ package com.financial.common.core.utils.file;
 /**
  * 媒体类型工具类
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class MimeTypeUtils
-{
+public class MimeTypeUtils {
     public static final String IMAGE_PNG = "image/png";
 
     public static final String IMAGE_JPG = "image/jpg";

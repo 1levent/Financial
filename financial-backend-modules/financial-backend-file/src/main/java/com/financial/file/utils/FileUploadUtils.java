@@ -19,7 +19,7 @@ import com.financial.common.core.utils.uuid.Seq;
 /**
  * 文件上传工具类
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class FileUploadUtils
 {

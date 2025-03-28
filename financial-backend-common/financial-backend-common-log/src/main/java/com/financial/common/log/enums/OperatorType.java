@@ -3,7 +3,7 @@ package com.financial.common.log.enums;
 /**
  * 操作人类别
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public enum OperatorType
 {

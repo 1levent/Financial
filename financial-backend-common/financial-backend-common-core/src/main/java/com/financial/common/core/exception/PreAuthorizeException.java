@@ -3,7 +3,7 @@ package com.financial.common.core.exception;
 /**
  * 权限异常
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class PreAuthorizeException extends RuntimeException
 {

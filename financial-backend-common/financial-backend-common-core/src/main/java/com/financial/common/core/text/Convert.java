@@ -12,10 +12,9 @@ import com.financial.common.core.utils.StringUtils;
 /**
  * 类型转换器
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class Convert
-{
+public class Convert {
     /**
      * 转换为字符串<br>
      * 如果给定的值为null，或者转换失败，返回默认值<br>
@@ -25,14 +24,11 @@ public class Convert
      * @param defaultValue 转换错误时的默认值
      * @return 结果
      */
-    public static String toStr(Object value, String defaultValue)
-    {
-        if (null == value)
-        {
+    public static String toStr(Object value, String defaultValue) {
+        if (null == value) {
             return defaultValue;
         }
-        if (value instanceof String)
-        {
+        if (value instanceof String) {
             return (String) value;
         }
         return value.toString();
@@ -46,8 +42,7 @@ public class Convert
      * @param value 被转换的值
      * @return 结果
      */
-    public static String toStr(Object value)
-    {
+    public static String toStr(Object value) {
         return toStr(value, null);
     }
 
@@ -60,14 +55,11 @@ public class Convert
      * @param defaultValue 转换错误时的默认值
      * @return 结果
      */
-    public static Character toChar(Object value, Character defaultValue)
-    {
-        if (null == value)
-        {
+    public static Character toChar(Object value, Character defaultValue) {
+        if (null == value) {
             return defaultValue;
         }
-        if (value instanceof Character)
-        {
+        if (value instanceof Character) {
             return (Character) value;
         }
 
@@ -83,8 +75,7 @@ public class Convert
      * @param value 被转换的值
      * @return 结果
      */
-    public static Character toChar(Object value)
-    {
+    public static Character toChar(Object value) {
         return toChar(value, null);
     }
 
@@ -97,31 +88,22 @@ public class Convert
      * @param defaultValue 转换错误时的默认值
      * @return 结果
      */
-    public static Byte toByte(Object value, Byte defaultValue)
-    {
-        if (value == null)
-        {
+    public static Byte toByte(Object value, Byte defaultValue) {
+        if (value == null) {
             return defaultValue;
         }
-        if (value instanceof Byte)
-        {
+        if (value instanceof Byte) {
             return (Byte) value;
         }
-        if (value instanceof Number)
-        {
+        if (value instanceof Number) {
             return ((Number) value).byteValue();
         }
         final String valueStr = toStr(value, null);
-        if (StringUtils.isEmpty(valueStr))
-        {
+        if (StringUtils.isEmpty(valueStr)) {
             return defaultValue;
-        }
-        try
-        {
+        }try {
             return Byte.parseByte(valueStr);
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             return defaultValue;
         }
     }

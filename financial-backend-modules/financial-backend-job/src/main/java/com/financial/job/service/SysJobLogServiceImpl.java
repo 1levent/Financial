@@ -1,7 +1,8 @@
 package com.financial.job.service;
 
+import jakarta.annotation.Resource;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 import com.financial.job.domain.SysJobLog;
 import com.financial.job.mapper.SysJobLogMapper;
@@ -9,12 +10,12 @@ import com.financial.job.mapper.SysJobLogMapper;
 /**
  * 定时任务调度日志信息 服务层
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @Service
 public class SysJobLogServiceImpl implements ISysJobLogService
 {
-    @Autowired
+    @Resource
     private SysJobLogMapper jobLogMapper;
 
     /**

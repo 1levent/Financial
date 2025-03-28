@@ -1,6 +1,6 @@
 package com.financial.common.security.utils;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import com.financial.common.core.constant.SecurityConstants;
 import com.financial.common.core.constant.TokenConstants;
@@ -12,10 +12,9 @@ import com.financial.system.api.model.LoginUser;
 /**
  * 权限获取工具类
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class SecurityUtils
-{
+public class SecurityUtils {
     /**
      * 获取用户ID
      */

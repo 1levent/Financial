@@ -21,10 +21,9 @@ import com.financial.system.api.model.LoginUser;
 /**
  * Token 权限验证，逻辑实现类
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class AuthLogic
-{
+public class AuthLogic {
     /** 所有权限标识 */
     private static final String ALL_PERMISSION = "*:*:*";
 
@@ -36,8 +35,7 @@ public class AuthLogic
     /**
      * 会话注销
      */
-    public void logout()
-    {
+    public void logout() {
         String token = SecurityUtils.getToken();
         if (token == null)
         {
@@ -67,8 +65,7 @@ public class AuthLogic
      * 
      * @return 用户缓存信息
      */
-    public LoginUser getLoginUser()
-    {
+    public LoginUser getLoginUser() {
         String token = SecurityUtils.getToken();
         if (token == null)
         {
@@ -120,8 +117,7 @@ public class AuthLogic
      * @param permission 权限字符串
      * @return 用户是否具备某权限
      */
-    public void checkPermi(String permission)
-    {
+    public void checkPermi(String permission) {
         if (!hasPermi(getPermiList(), permission))
         {
             throw new NotPermissionException(permission);
@@ -133,15 +129,12 @@ public class AuthLogic
      * 
      * @param requiresPermissions 注解对象
      */
-    public void checkPermi(RequiresPermissions requiresPermissions)
-    {
+    public void checkPermi(RequiresPermissions requiresPermissions) {
         SecurityContextHolder.setPermission(StringUtils.join(requiresPermissions.value(), ","));
-        if (requiresPermissions.logical() == Logical.AND)
-        {
+        if (requiresPermissions.logical() == Logical.AND) {
             checkPermiAnd(requiresPermissions.value());
         }
-        else
-        {
+        else {
             checkPermiOr(requiresPermissions.value());
         }
     }
@@ -151,13 +144,10 @@ public class AuthLogic
      *
      * @param permissions 权限列表
      */
-    public void checkPermiAnd(String... permissions)
-    {
+    public void checkPermiAnd(String... permissions) {
         Set<String> permissionList = getPermiList();
-        for (String permission : permissions)
-        {
-            if (!hasPermi(permissionList, permission))
-            {
+        for (String permission : permissions) {
+            if (!hasPermi(permissionList, permission)) {
                 throw new NotPermissionException(permission);
             }
         }
@@ -168,18 +158,14 @@ public class AuthLogic
      * 
      * @param permissions 权限码数组
      */
-    public void checkPermiOr(String... permissions)
-    {
+    public void checkPermiOr(String... permissions) {
         Set<String> permissionList = getPermiList();
-        for (String permission : permissions)
-        {
-            if (hasPermi(permissionList, permission))
-            {
+        for (String permission : permissions) {
+            if (hasPermi(permissionList, permission)) {
                 return;
             }
         }
-        if (permissions.length > 0)
-        {
+        if (permissions.length > 0) {
             throw new NotPermissionException(permissions);
         }
     }
@@ -200,10 +186,8 @@ public class AuthLogic
      * 
      * @param role 角色标识
      */
-    public void checkRole(String role)
-    {
-        if (!hasRole(role))
-        {
+    public void checkRole(String role) {
+        if (!hasRole(role)) {
             throw new NotRoleException(role);
         }
     }
@@ -213,14 +197,10 @@ public class AuthLogic
      * 
      * @param requiresRoles 注解对象
      */
-    public void checkRole(RequiresRoles requiresRoles)
-    {
-        if (requiresRoles.logical() == Logical.AND)
-        {
+    public void checkRole(RequiresRoles requiresRoles) {
+        if (requiresRoles.logical() == Logical.AND) {
             checkRoleAnd(requiresRoles.value());
-        }
-        else
-        {
+        } else {
             checkRoleOr(requiresRoles.value());
         }
     }
@@ -230,13 +210,10 @@ public class AuthLogic
      * 
      * @param roles 角色标识数组
      */
-    public void checkRoleAnd(String... roles)
-    {
+    public void checkRoleAnd(String... roles) {
         Set<String> roleList = getRoleList();
-        for (String role : roles)
-        {
-            if (!hasRole(roleList, role))
-            {
+        for (String role : roles) {
+            if (!hasRole(roleList, role)) {
                 throw new NotRoleException(role);
             }
         }
@@ -247,18 +224,14 @@ public class AuthLogic
      * 
      * @param roles 角色标识数组
      */
-    public void checkRoleOr(String... roles)
-    {
+    public void checkRoleOr(String... roles) {
         Set<String> roleList = getRoleList();
-        for (String role : roles)
-        {
-            if (hasRole(roleList, role))
-            {
+        for (String role : roles) {
+            if (hasRole(roleList, role)) {
                 return;
             }
         }
-        if (roles.length > 0)
-        {
+        if (roles.length > 0) {
             throw new NotRoleException(roles);
         }
     }
@@ -278,15 +251,11 @@ public class AuthLogic
      * 
      * @param at 注解对象
      */
-    public void checkByAnnotation(RequiresRoles at)
-    {
+    public void checkByAnnotation(RequiresRoles at) {
         String[] roleArray = at.value();
-        if (at.logical() == Logical.AND)
-        {
+        if (at.logical() == Logical.AND) {
             this.checkRoleAnd(roleArray);
-        }
-        else
-        {
+        } else {
             this.checkRoleOr(roleArray);
         }
     }
@@ -296,15 +265,11 @@ public class AuthLogic
      * 
      * @param at 注解对象
      */
-    public void checkByAnnotation(RequiresPermissions at)
-    {
+    public void checkByAnnotation(RequiresPermissions at) {
         String[] permissionArray = at.value();
-        if (at.logical() == Logical.AND)
-        {
+        if (at.logical() == Logical.AND) {
             this.checkPermiAnd(permissionArray);
-        }
-        else
-        {
+        } else {
             this.checkPermiOr(permissionArray);
         }
     }
@@ -314,15 +279,11 @@ public class AuthLogic
      * 
      * @return 角色列表
      */
-    public Set<String> getRoleList()
-    {
-        try
-        {
+    public Set<String> getRoleList() {
+        try {
             LoginUser loginUser = getLoginUser();
             return loginUser.getRoles();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             return new HashSet<>();
         }
     }
@@ -332,15 +293,11 @@ public class AuthLogic
      * 
      * @return 权限列表
      */
-    public Set<String> getPermiList()
-    {
-        try
-        {
+    public Set<String> getPermiList() {
+        try {
             LoginUser loginUser = getLoginUser();
             return loginUser.getPermissions();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             return new HashSet<>();
         }
     }
@@ -352,8 +309,7 @@ public class AuthLogic
      * @param permission 权限字符串
      * @return 用户是否具备某权限
      */
-    public boolean hasPermi(Collection<String> authorities, String permission)
-    {
+    public boolean hasPermi(Collection<String> authorities, String permission) {
         return authorities.stream().filter(StringUtils::hasText)
                 .anyMatch(x -> ALL_PERMISSION.equals(x) || PatternMatchUtils.simpleMatch(x, permission));
     }
@@ -365,8 +321,7 @@ public class AuthLogic
      * @param role 角色
      * @return 用户是否具备某角色权限
      */
-    public boolean hasRole(Collection<String> roles, String role)
-    {
+    public boolean hasRole(Collection<String> roles, String role) {
         return roles.stream().filter(StringUtils::hasText)
                 .anyMatch(x -> SUPER_ADMIN.equals(x) || PatternMatchUtils.simpleMatch(x, role));
     }

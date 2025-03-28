@@ -3,10 +3,9 @@ package com.financial.auth.form;
 /**
  * 用户登录对象
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class LoginBody
-{
+public class LoginBody {
     /**
      * 用户名
      */

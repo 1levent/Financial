@@ -1,7 +1,8 @@
 package com.financial.gen.service;
 
+import jakarta.annotation.Resource;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 import com.financial.common.core.text.Convert;
 import com.financial.gen.domain.GenTableColumn;
@@ -10,12 +11,12 @@ import com.financial.gen.mapper.GenTableColumnMapper;
 /**
  * 业务字段 服务层实现
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @Service
 public class GenTableColumnServiceImpl implements IGenTableColumnService 
 {
-	@Autowired
+	@Resource
 	private GenTableColumnMapper genTableColumnMapper;
 
 	/**

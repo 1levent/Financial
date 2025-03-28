@@ -1,8 +1,9 @@
 package com.financial.file.service;
 
+import jakarta.annotation.Resource;
 import java.io.InputStream;
 import com.alibaba.nacos.common.utils.IoUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -13,7 +14,7 @@ import com.financial.common.core.utils.file.FileTypeUtils;
 /**
  * FastDFS 文件存储
  *
- * @author ruoyi
+ * @author xinyi
  */
 @Service
 public class FastDfsSysFileServiceImpl implements ISysFileService
@@ -24,7 +25,7 @@ public class FastDfsSysFileServiceImpl implements ISysFileService
     @Value("${fdfs.domain}")
     public String domain;
 
-    @Autowired
+    @Resource
     private FastFileStorageClient storageClient;
 
     /**

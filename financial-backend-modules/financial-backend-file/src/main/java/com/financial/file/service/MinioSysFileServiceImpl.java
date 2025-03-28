@@ -1,7 +1,8 @@
 package com.financial.file.service;
 
+import jakarta.annotation.Resource;
 import java.io.InputStream;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import com.alibaba.nacos.common.utils.IoUtils;
@@ -13,15 +14,15 @@ import io.minio.PutObjectArgs;
 /**
  * Minio 文件存储
  *
- * @author ruoyi
+ * @author xinyi
  */
 @Service
 public class MinioSysFileServiceImpl implements ISysFileService
 {
-    @Autowired
+    @Resource
     private MinioConfig minioConfig;
 
-    @Autowired
+    @Resource
     private MinioClient client;
 
     /**

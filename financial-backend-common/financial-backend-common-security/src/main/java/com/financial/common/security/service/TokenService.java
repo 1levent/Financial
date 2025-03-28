@@ -1,12 +1,12 @@
 package com.financial.common.security.service;
 
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.financial.common.core.constant.CacheConstants;
 import com.financial.common.core.constant.SecurityConstants;
@@ -22,14 +22,13 @@ import com.financial.system.api.model.LoginUser;
 /**
  * token验证处理
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @Component
-public class TokenService
-{
+public class TokenService {
     private static final Logger log = LoggerFactory.getLogger(TokenService.class);
 
-    @Autowired
+    @Resource
     private RedisService redisService;
 
     protected static final long MILLIS_SECOND = 1000;

@@ -3,7 +3,7 @@ package com.financial.common.core.constant;
 /**
  * 权限相关通用常量
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class SecurityConstants
 {

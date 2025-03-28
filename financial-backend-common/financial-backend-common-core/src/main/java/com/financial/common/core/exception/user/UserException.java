@@ -5,7 +5,7 @@ import com.financial.common.core.exception.base.BaseException;
 /**
  * 用户信息异常类
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class UserException extends BaseException
 {

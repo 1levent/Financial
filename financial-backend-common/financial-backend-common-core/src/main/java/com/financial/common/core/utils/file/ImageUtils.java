@@ -12,10 +12,9 @@ import org.slf4j.LoggerFactory;
 /**
  * 图片处理工具类
  *
- * @author ruoyi
+ * @author xinyi
  */
-public class ImageUtils
-{
+public class ImageUtils {
     private static final Logger log = LoggerFactory.getLogger(ImageUtils.class);
 
     public static byte[] getImage(String imagePath)

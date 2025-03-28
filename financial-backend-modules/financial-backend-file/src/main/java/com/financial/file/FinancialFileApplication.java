@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 /**
  * 文件服务
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 public class FinancialFileApplication

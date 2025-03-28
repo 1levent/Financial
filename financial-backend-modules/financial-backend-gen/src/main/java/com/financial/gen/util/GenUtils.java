@@ -11,7 +11,7 @@ import com.financial.gen.domain.GenTableColumn;
 /**
  * 代码生成器 工具类
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class GenUtils
 {

@@ -10,17 +10,15 @@ import org.springframework.stereotype.Component;
 /**
  * spring工具类 方便在非spring管理环境中获取bean
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @Component
-public final class SpringUtils implements BeanFactoryPostProcessor
-{
+public final class SpringUtils implements BeanFactoryPostProcessor {
     /** Spring应用上下文环境 */
     private static ConfigurableListableBeanFactory beanFactory;
 
     @Override
-    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException
-    {
+    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
         SpringUtils.beanFactory = beanFactory;
     }
 
@@ -29,8 +27,6 @@ public final class SpringUtils implements BeanFactoryPostProcessor
      *
      * @param name
      * @return Object 一个以所给名字注册的bean的实例
-     * @throws org.springframework.beans.BeansException
-     *
      */
     @SuppressWarnings("unchecked")
     public static <T> T getBean(String name) throws BeansException

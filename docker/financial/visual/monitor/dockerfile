@@ -1,15 +1,13 @@
 # 基础镜像
-FROM  openjdk:8-jre
-# author
-MAINTAINER ruoyi
+FROM  openjdk:17-oracle
 
 # 挂载目录
-VOLUME /home/ruoyi
+VOLUME /home/financial-backend
 # 创建目录
-RUN mkdir -p /home/ruoyi
+RUN mkdir -p /home/financial-backend
 # 指定路径
-WORKDIR /home/ruoyi
+WORKDIR /home/financial-backend
 # 复制jar文件到路径
-COPY ./jar/financial-backend-visual-monitor.jar /home/ruoyi/financial-backend-visual-monitor.jar
+COPY ./jar/financial-backend-visual-monitor.jar /home/financial-backend/financial-backend-visual-monitor.jar
 # 启动系统服务
 ENTRYPOINT ["java","-jar","financial-backend-visual-monitor.jar"]

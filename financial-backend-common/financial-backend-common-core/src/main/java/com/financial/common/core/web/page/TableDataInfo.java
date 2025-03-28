@@ -6,10 +6,9 @@ import java.util.List;
 /**
  * 表格分页数据对象
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class TableDataInfo implements Serializable
-{
+public class TableDataInfo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /** 总记录数 */

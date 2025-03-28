@@ -3,7 +3,7 @@ package com.financial.common.core.exception.job;
 /**
  * 计划策略异常
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class TaskException extends Exception
 {

@@ -9,13 +9,12 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 放行白名单配置
  * 
- * @author ruoyi
+ * @author xinyi
  */
 @Configuration
 @RefreshScope
 @ConfigurationProperties(prefix = "security.ignore")
-public class IgnoreWhiteProperties
-{
+public class IgnoreWhiteProperties {
     /**
      * 放行白名单配置，网关不校验此处的白名单
      */

@@ -7,10 +7,9 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 /**
  * 错误信息处理类。
  *
- * @author ruoyi
+ * @author xinyi
  */
-public class ExceptionUtil
-{
+public class ExceptionUtil {
     /**
      * 获取exception的详细错误信息。
      */
@@ -25,13 +24,11 @@ public class ExceptionUtil
     {
         Throwable root = ExceptionUtils.getRootCause(e);
         root = (root == null ? e : root);
-        if (root == null)
-        {
+        if (root == null) {
             return "";
         }
         String msg = root.getMessage();
-        if (msg == null)
-        {
+        if (msg == null) {
             return "null";
         }
         return StringUtils.defaultString(msg);

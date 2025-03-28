@@ -1,15 +1,16 @@
 package com.financial.common.core.domain;
 
+import java.io.Serial;
 import java.io.Serializable;
 import com.financial.common.core.constant.Constants;
 
 /**
  * 响应信息主体
  *
- * @author ruoyi
+ * @author xinyi
  */
-public class R<T> implements Serializable
-{
+public class R<T> implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     /** 成功 */

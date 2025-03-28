@@ -3,7 +3,7 @@ package com.financial.common.core.constant;
 /**
  * 通用常量信息
  * 
- * @author ruoyi
+ * @author xinyi
  */
 public class Constants
 {

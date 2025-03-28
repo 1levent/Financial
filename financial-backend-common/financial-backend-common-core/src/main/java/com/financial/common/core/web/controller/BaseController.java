@@ -19,16 +19,14 @@ import com.financial.common.core.web.page.TableDataInfo;
  * 
  * @author levent
  */
-public class BaseController
-{
+public class BaseController {
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     /**
      * 将前台传递过来的日期格式的字符串，自动转化为Date类型
      */
     @InitBinder
-    public void initBinder(WebDataBinder binder)
-    {
+    public void initBinder(WebDataBinder binder) {
         // Date 类型转换
         binder.registerCustomEditor(Date.class, new PropertyEditorSupport()
         {
@@ -43,8 +41,7 @@ public class BaseController
     /**
      * 设置请求分页数据
      */
-    protected void startPage()
-    {
+    protected void startPage() {
         PageUtils.startPage();
     }
 
@@ -60,8 +57,7 @@ public class BaseController
      * 响应请求分页数据
      */
     @SuppressWarnings({ "rawtypes", "unchecked" })
-    protected TableDataInfo getDataTable(List<?> list)
-    {
+    protected TableDataInfo getDataTable(List<?> list) {
         TableDataInfo rspData = new TableDataInfo();
         rspData.setCode(HttpStatus.SUCCESS);
         rspData.setRows(list);
@@ -124,8 +120,7 @@ public class BaseController
      * @param rows 影响行数
      * @return 操作结果
      */
-    protected AjaxResult toAjax(int rows)
-    {
+    protected AjaxResult toAjax(int rows) {
         return rows > 0 ? AjaxResult.success() : AjaxResult.error();
     }
 

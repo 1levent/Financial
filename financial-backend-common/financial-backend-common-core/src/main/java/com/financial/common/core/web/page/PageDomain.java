@@ -5,10 +5,9 @@ import com.financial.common.core.utils.StringUtils;
 /**
  * 分页数据
  * 
- * @author ruoyi
+ * @author xinyi
  */
-public class PageDomain
-{
+public class PageDomain {
     /** 当前记录起始索引 */
     private Integer pageNum;
 

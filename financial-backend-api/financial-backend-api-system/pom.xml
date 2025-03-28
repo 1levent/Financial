@@ -17,12 +17,24 @@
 
     <dependencies>
 		
-        <!-- RuoYi Common Core-->
+        <!--Common Core-->
         <dependency>
             <groupId>com.financial</groupId>
             <artifactId>financial-common-core</artifactId>
         </dependency>
-        
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-annotation</artifactId>
+            <version>3.5.7</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
 </project>

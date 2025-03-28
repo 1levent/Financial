@@ -59,7 +59,7 @@
             <artifactId>financial-common-log</artifactId>
         </dependency>
         
-        <!-- RuoYi Common Swagger -->
+        <!-- Common Swagger -->
         <dependency>
             <groupId>com.financial</groupId>
             <artifactId>financial-common-swagger</artifactId>

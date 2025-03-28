@@ -5,10 +5,9 @@ import com.financial.common.core.utils.DateUtils;
 import com.financial.common.core.utils.StringUtils;
 
 /**
- * @author ruoyi 序列生成类
+ * @author xinyi 序列生成类
  */
-public class Seq
-{
+public class Seq {
     // 通用序列类型
     public static final String commSeqType = "COMMON";
 
@@ -39,8 +38,7 @@ public class Seq
      * 
      * @return 序列值
      */
-    public static String getId(String type)
-    {
+    public static String getId(String type) {
         AtomicInteger atomicInt = commSeq;
         if (uploadSeqType.equals(type))
         {
@@ -56,8 +54,7 @@ public class Seq
      * @param length 数值长度
      * @return 序列值
      */
-    public static String getId(AtomicInteger atomicInt, int length)
-    {
+    public static String getId(AtomicInteger atomicInt, int length) {
         String result = DateUtils.dateTimeNow();
         result += machineCode;
         result += getSeq(atomicInt, length);
@@ -69,8 +66,7 @@ public class Seq
      * 
      * @return 序列值
      */
-    private synchronized static String getSeq(AtomicInteger atomicInt, int length)
-    {
+    private synchronized static String getSeq(AtomicInteger atomicInt, int length) {
         // 先取值再+1
         int value = atomicInt.getAndIncrement();
 
