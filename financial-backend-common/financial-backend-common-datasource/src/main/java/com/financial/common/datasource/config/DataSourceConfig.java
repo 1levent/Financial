@@ -22,10 +22,9 @@ public class DataSourceConfig {
 
   @Bean("master")
   @Primary
-  @ConfigurationProperties(prefix = "spring.datasource")
+  @ConfigurationProperties(prefix = "spring.datasource.dynamic.datasource.master")
   public DataSource dataSource() {
-    DataSource masterDataSource = DruidDataSourceBuilder.create().build();
-    return masterDataSource;
+    return DruidDataSourceBuilder.create().build();
 //    MyRoutingDataSource routingDataSource = new MyRoutingDataSource();
 //    // 显式设置数据源映射
 //    Map<Object, Object> targetDataSources = new HashMap<>();

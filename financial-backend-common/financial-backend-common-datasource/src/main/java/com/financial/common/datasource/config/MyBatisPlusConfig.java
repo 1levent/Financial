@@ -5,31 +5,44 @@ import com.baomidou.mybatisplus.core.config.GlobalConfig;
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
+import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
+import jakarta.annotation.Resource;
 import java.time.LocalDateTime;
+import javax.sql.DataSource;
 import org.apache.ibatis.reflection.MetaObject;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 /**
  * mybatis-plus 配置
  * @author xinyi
  */
 @Configuration
+@MapperScan(sqlSessionFactoryRef = "sqlSessionFactory")
 public class MyBatisPlusConfig {
 
-    //分页插件
+    @Resource
+    @Qualifier("master")
+    private DataSource dataSource;
+
+    //必须要配置sqlSessionFactory
     @Bean
-    public MybatisPlusInterceptor mybatisPlusInterceptor() {
+    @Primary
+    public SqlSessionFactory sqlSessionFactory() throws Exception {
+        MybatisSqlSessionFactoryBean factoryBean = new MybatisSqlSessionFactoryBean();
+        factoryBean.setDataSource(dataSource);
+        //向Mybatis过滤器链中添加拦截器
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
-        // 添加分页插件，指定数据库类型（如 MySQL）
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
-        return interceptor;
-    }
-    //自动填充
-    @Bean
-    public GlobalConfig globalConfig() {
-        GlobalConfig globalConfig = new GlobalConfig();
-        globalConfig.setMetaObjectHandler(new MetaObjectHandler() {
+        factoryBean.setPlugins(interceptor);
+        //添加自动填充
+        factoryBean.setGlobalConfig(new GlobalConfig().setMetaObjectHandler(new MetaObjectHandler() {
             @Override
             public void insertFill(MetaObject metaObject) {
                 this.strictInsertFill(metaObject, "createTime", LocalDateTime.class, LocalDateTime.now());
@@ -38,7 +51,19 @@ public class MyBatisPlusConfig {
             public void updateFill(MetaObject metaObject) {
                 this.strictUpdateFill(metaObject, "updateTime", LocalDateTime.class, LocalDateTime.now());
             }
-        });
-        return globalConfig;
+        }));
+        return factoryBean.getObject();
+    }
+
+    @Bean
+    @Primary
+    public SqlSessionTemplate sqlSessionTemplate() throws Exception {
+      return new SqlSessionTemplate(sqlSessionFactory());
+    }
+
+    @Bean
+    @Primary
+    public DataSourceTransactionManager transactionManager() {
+        return new DataSourceTransactionManager(dataSource);
     }
 }

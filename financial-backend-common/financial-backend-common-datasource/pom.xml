@@ -24,12 +24,12 @@
             <version>${druid.version}</version>
         </dependency>
 
-<!--        &lt;!&ndash; Dynamic DataSource &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.baomidou</groupId>-->
-<!--            <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>-->
-<!--            <version>${dynamic-ds.version}</version>-->
-<!--        </dependency>-->
+        <!-- Dynamic DataSource -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
+            <version>${dynamic-ds.version}</version>
+        </dependency>
 
 
         <!-- mybatis-plus -->

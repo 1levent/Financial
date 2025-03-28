@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
  * @author xinyi
  */
 @Component
-@ConfigurationProperties(prefix = "spring.datasource.druid")
+@ConfigurationProperties(prefix = "spring.datasource.dynamic.druid")
 @Getter
 @Setter
 public class DruidProperties {
