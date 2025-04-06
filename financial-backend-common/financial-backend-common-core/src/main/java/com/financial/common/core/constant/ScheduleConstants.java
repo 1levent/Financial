@@ -5,8 +5,7 @@ package com.financial.common.core.constant;
  * 
  * @author xinyi
  */
-public class ScheduleConstants
-{
+public class ScheduleConstants {
     public static final String TASK_CLASS_NAME = "TASK_CLASS_NAME";
 
     /** 执行目标key */

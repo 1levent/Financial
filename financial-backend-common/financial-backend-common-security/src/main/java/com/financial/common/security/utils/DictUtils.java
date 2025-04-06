@@ -1,5 +1,6 @@
 package com.financial.common.security.utils;
 
+import com.financial.system.api.RemoteDictService;
 import java.util.Collection;
 import java.util.List;
 import com.alibaba.fastjson2.JSONArray;
@@ -64,5 +65,36 @@ public class DictUtils {
      */
     public static String getCacheKey(String configKey) {
         return CacheConstants.SYS_DICT_KEY + configKey;
+    }
+
+    /**
+     * 根据字典类型和字典值获取字典标签
+     * @param dictType 字典类型
+     * @param dictValue 字典值
+     * @return 字典标签
+     */
+    public static String getDictValue(String dictType, String dictValue) {
+        //先在redis获取获取不到再调用远程服务
+        List<SysDictData> dictDatas = getDictCache(dictType);
+        if (StringUtils.isNotEmpty(dictDatas)) {
+            for (SysDictData dict : dictDatas) {
+                if (dictValue.equals(dict.getDictValue())) {
+                    return dict.getDictLabel();
+                }
+            }
+        }
+        //调用远程服务
+        List<SysDictData> sysDictDataList = SpringUtils.getBean(RemoteDictService.class).dictType(dictType).getData();
+        if (StringUtils.isNotEmpty(sysDictDataList)) {
+            for (SysDictData dict : sysDictDataList) {
+                if (dictValue.equals(dict.getDictValue())) {
+                    //设置到redis中
+                    setDictCache(dictType, sysDictDataList);
+                    System.out.println("调用远程服务获取的字典："+dict.getDictLabel());
+                    return dict.getDictLabel();
+                }
+            }
+        }
+        return null;
     }
 }

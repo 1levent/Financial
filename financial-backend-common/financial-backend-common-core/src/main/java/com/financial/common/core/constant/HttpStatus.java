@@ -5,8 +5,7 @@ package com.financial.common.core.constant;
  * 
  * @author xinyi
  */
-public class HttpStatus
-{
+public class HttpStatus {
     /**
      * 操作成功
      */

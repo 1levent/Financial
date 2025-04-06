@@ -63,8 +63,7 @@ public class AuthUtil {
      * @param role 角色标识
      * @return 是否含有指定角色标识
      */
-    public static boolean hasRole(String role)
-    {
+    public static boolean hasRole(String role) {
         return authLogic.hasRole(role);
     }
 
@@ -73,8 +72,7 @@ public class AuthUtil {
      * 
      * @param role 角色标识
      */
-    public static void checkRole(String role)
-    {
+    public static void checkRole(String role) {
         authLogic.checkRole(role);
     }
 

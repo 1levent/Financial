@@ -1,8 +1,6 @@
 package com.financial.common.datasource.config;
 
 import com.alibaba.druid.spring.boot3.autoconfigure.DruidDataSourceBuilder;
-import java.util.HashMap;
-import java.util.Map;
 import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

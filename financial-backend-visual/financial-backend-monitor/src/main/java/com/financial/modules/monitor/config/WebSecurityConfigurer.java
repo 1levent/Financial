@@ -18,8 +18,7 @@ import org.springframework.security.web.authentication.SavedRequestAwareAuthenti
  */
 @Configuration
 @EnableWebSecurity
-public class WebSecurityConfigurer
-{
+public class WebSecurityConfigurer {
     private final String adminContextPath;
 
     public WebSecurityConfigurer(AdminServerProperties adminServerProperties) {
@@ -42,6 +41,10 @@ public class WebSecurityConfigurer
                     ant(adminContextPath + "/login"),
                     ant(adminContextPath + "/actuator/**"),
                     ant(adminContextPath + "/instances/**")
+                    //antMatchers("/favicon.ico", "/doc.html", "/webjars/**")
+//                    ant(adminContextPath + "/favicon.ico"),
+//                    ant(adminContextPath + "/doc.html"),
+//                    ant(adminContextPath + "/webjars/**")
                 ).permitAll()
                 .anyRequest()
                 .authenticated()

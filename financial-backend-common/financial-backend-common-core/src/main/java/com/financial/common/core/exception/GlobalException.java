@@ -5,8 +5,7 @@ package com.financial.common.core.exception;
  * 
  * @author xinyi
  */
-public class GlobalException extends RuntimeException
-{
+public class GlobalException extends RuntimeException {
     private static final long serialVersionUID = 1L;
 
     /**
@@ -24,8 +23,7 @@ public class GlobalException extends RuntimeException
     /**
      * 空构造方法，避免反序列化问题
      */
-    public GlobalException()
-    {
+    public GlobalException() {
     }
 
     public GlobalException(String message)
@@ -38,8 +36,7 @@ public class GlobalException extends RuntimeException
         return detailMessage;
     }
 
-    public GlobalException setDetailMessage(String detailMessage)
-    {
+    public GlobalException setDetailMessage(String detailMessage) {
         this.detailMessage = detailMessage;
         return this;
     }

@@ -5,8 +5,7 @@ package com.financial.common.core.constant;
  * 
  * @author xinyi
  */
-public class ServiceNameConstants
-{
+public class ServiceNameConstants {
     /**
      * 认证服务的serviceid
      */

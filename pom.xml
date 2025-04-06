@@ -38,6 +38,7 @@
         <lombok.version>1.18.34</lombok.version>
         <mybatis-plus.version>3.5.9</mybatis-plus.version>
         <mybatis.version>3.0.4</mybatis.version>
+        <knife4j.version>4.5.0</knife4j.version>
 
         <!-- override dependency version -->
         <tomcat.version>10.1.30</tomcat.version>
@@ -224,12 +225,6 @@
                 <scope>import</scope>
             </dependency>
 
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-                <version>${mybatis.version}</version>
-            </dependency>
-
             <!-- 线程传递值 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -241,13 +236,6 @@
             <dependency>
                 <groupId>com.financial</groupId>
                 <artifactId>financial-common-core</artifactId>
-                <version>${financial.version}</version>
-            </dependency>
-
-            <!-- 接口模块 -->
-            <dependency>
-                <groupId>com.financial</groupId>
-                <artifactId>financial-common-swagger</artifactId>
                 <version>${financial.version}</version>
             </dependency>
 

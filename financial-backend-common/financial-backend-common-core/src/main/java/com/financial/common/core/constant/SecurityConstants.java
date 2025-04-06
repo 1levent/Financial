@@ -5,8 +5,7 @@ package com.financial.common.core.constant;
  * 
  * @author xinyi
  */
-public class SecurityConstants
-{
+public class SecurityConstants {
     /**
      * 用户ID字段
      */

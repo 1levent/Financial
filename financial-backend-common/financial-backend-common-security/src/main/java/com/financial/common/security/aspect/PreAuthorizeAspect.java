@@ -23,8 +23,7 @@ public class PreAuthorizeAspect {
     /**
      * 构建
      */
-    public PreAuthorizeAspect()
-    {
+    public PreAuthorizeAspect() {
     }
 
     /**
@@ -38,8 +37,7 @@ public class PreAuthorizeAspect {
      * 声明AOP签名
      */
     @Pointcut(POINTCUT_SIGN)
-    public void pointcut()
-    {
+    public void pointcut() {
     }
 
     /**
@@ -51,7 +49,7 @@ public class PreAuthorizeAspect {
      */
     @Around("pointcut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
-        // 注解鉴权
+        // 注解鉴权，获取方法签名
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         checkMethodAnnotation(signature.getMethod());
         try {

@@ -58,12 +58,6 @@
             <groupId>com.financial</groupId>
             <artifactId>financial-common-log</artifactId>
         </dependency>
-        
-        <!-- Common Swagger -->
-        <dependency>
-            <groupId>com.financial</groupId>
-            <artifactId>financial-common-swagger</artifactId>
-        </dependency>
 
     </dependencies>
 

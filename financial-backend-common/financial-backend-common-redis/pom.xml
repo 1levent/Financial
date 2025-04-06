@@ -28,6 +28,7 @@
             <groupId>com.financial</groupId>
             <artifactId>financial-common-core</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.alibaba.fastjson2</groupId>
             <artifactId>fastjson2</artifactId>

@@ -84,8 +84,7 @@ public class R<T> implements Serializable {
         this.code = code;
     }
 
-    public String getMsg()
-    {
+    public String getMsg() {
         return msg;
     }
 

@@ -5,8 +5,7 @@ package com.financial.common.core.constant;
  * 
  * @author xinyi
  */
-public class CacheConstants
-{
+public class CacheConstants {
     /**
      * 缓存有效期，默认720（分钟）
      */

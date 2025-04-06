@@ -2,19 +2,21 @@ package com.financial.system.api.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serial;
+import java.io.Serializable;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.financial.common.core.annotation.Excel;
 import com.financial.common.core.annotation.Excel.ColumnType;
-import com.financial.common.core.web.domain.BaseEntity;
 
 /**
  * 操作日志记录表 oper_log
  * 
  * @author xinyi
  */
-public class SysOperLog extends BaseEntity {
+@TableName("sys_oper_log")
+public class SysOperLog implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 

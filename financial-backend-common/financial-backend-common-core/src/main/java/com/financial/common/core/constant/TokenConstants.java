@@ -5,8 +5,7 @@ package com.financial.common.core.constant;
  * 
  * @author xinyi
  */
-public class TokenConstants
-{
+public class TokenConstants {
     /**
      * 令牌前缀
      */

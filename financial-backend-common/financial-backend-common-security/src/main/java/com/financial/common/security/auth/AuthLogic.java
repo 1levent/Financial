@@ -55,8 +55,7 @@ public class AuthLogic {
     /**
      * 检验用户是否已经登录，如未登录，则抛出异常
      */
-    public void checkLogin()
-    {
+    public void checkLogin() {
         getLoginUser();
     }
 
@@ -67,13 +66,11 @@ public class AuthLogic {
      */
     public LoginUser getLoginUser() {
         String token = SecurityUtils.getToken();
-        if (token == null)
-        {
+        if (token == null) {
             throw new NotLoginException("未提供token");
         }
         LoginUser loginUser = SecurityUtils.getLoginUser();
-        if (loginUser == null)
-        {
+        if (loginUser == null) {
             throw new NotLoginException("无效的token");
         }
         return loginUser;
@@ -85,8 +82,7 @@ public class AuthLogic {
      * @param token 前端传递的认证信息
      * @return 用户缓存信息
      */
-    public LoginUser getLoginUser(String token)
-    {
+    public LoginUser getLoginUser(String token) {
         return tokenService.getLoginUser(token);
     }
 
@@ -95,8 +91,7 @@ public class AuthLogic {
      * 
      * @param loginUser 当前用户信息
      */
-    public void verifyLoginUserExpire(LoginUser loginUser)
-    {
+    public void verifyLoginUserExpire(LoginUser loginUser) {
         tokenService.verifyToken(loginUser);
     }
 
@@ -241,8 +236,7 @@ public class AuthLogic {
      * 
      * @param at 注解对象
      */
-    public void checkByAnnotation(RequiresLogin at)
-    {
+    public void checkByAnnotation(RequiresLogin at) {
         this.checkLogin();
     }
 
@@ -316,7 +310,7 @@ public class AuthLogic {
 
     /**
      * 判断是否包含角色
-     * 
+     *
      * @param roles 角色列表
      * @param role 角色
      * @return 用户是否具备某角色权限

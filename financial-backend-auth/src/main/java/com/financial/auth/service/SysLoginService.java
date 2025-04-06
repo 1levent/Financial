@@ -74,7 +74,7 @@ public class SysLoginService {
 
         LoginUser userInfo = userResult.getData();
         SysUser user = userResult.getData().getSysUser();
-        if (UserStatus.DELETED.getCode().equals(user.getDelFlag())) {
+        if (user.isDeleted()) {
             recordLogService.recordLogininfor(username, Constants.LOGIN_FAIL, "对不起，您的账号已被删除");
             throw new ServiceException("对不起，您的账号：" + username + " 已被删除");
         }
@@ -129,6 +129,7 @@ public class SysLoginService {
         sysUser.setUserName(username);
         sysUser.setNickName(username);
         sysUser.setPassword(SecurityUtils.encryptPassword(password));
+        System.out.println("加密后得密码："+sysUser.getPassword());
         R<?> registerResult = remoteUserService.registerUserInfo(sysUser, SecurityConstants.INNER);
 
         if (R.FAIL == registerResult.getCode()) {

@@ -20,13 +20,11 @@ public class IgnoreWhiteProperties {
      */
     private List<String> whites = new ArrayList<>();
 
-    public List<String> getWhites()
-    {
+    public List<String> getWhites() {
         return whites;
     }
 
-    public void setWhites(List<String> whites)
-    {
+    public void setWhites(List<String> whites) {
         this.whites = whites;
     }
 }

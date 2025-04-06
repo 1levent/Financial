@@ -288,8 +288,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
      * @param str 要判断的value
      * @return 结果
      */
-    public static boolean hasText(String str)
-    {
+    public static boolean hasText(String str) {
         return (str != null && !str.isEmpty() && containsText(str));
     }
 

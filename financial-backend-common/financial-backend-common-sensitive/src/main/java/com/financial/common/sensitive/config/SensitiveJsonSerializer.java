@@ -18,8 +18,7 @@ import com.financial.system.api.model.LoginUser;
  *
  * @author xinyi
  */
-public class SensitiveJsonSerializer extends JsonSerializer<String> implements ContextualSerializer
-{
+public class SensitiveJsonSerializer extends JsonSerializer<String> implements ContextualSerializer {
     private DesensitizedType desensitizedType;
 
     @Override

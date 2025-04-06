@@ -5,8 +5,7 @@ package com.financial.common.core.constant;
  * 
  * @author xinyi
  */
-public class Constants
-{
+public class Constants {
     /**
      * UTF-8 字符集
      */
