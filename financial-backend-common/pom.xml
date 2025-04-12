@@ -17,6 +17,7 @@
         <module>financial-backend-common-sensitive</module>
         <module>financial-backend-common-datascope</module>
         <module>financial-backend-common-datasource</module>
+        <module>financial-backend-common-mq</module>
     </modules>
 
     <artifactId>financial-common</artifactId>
