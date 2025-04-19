@@ -1,25 +1,24 @@
 package com.financial.business.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.financial.business.entity.BudgetManagement;
 import com.financial.business.entity.conveter.BudgetManagementStructMapper;
 import com.financial.business.entity.dto.BudgetManagementDTO;
 import com.financial.business.service.IBudgetManagementService;
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
-import com.financial.common.core.web.page.TableDataInfo;
+import com.financial.common.core.web.page.PageResponse;
 import com.financial.common.log.annotation.Log;
 import com.financial.common.log.enums.BusinessType;
-import com.financial.common.security.annotation.RequiresPermissions;
+import com.financial.common.security.utils.SecurityUtils;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import java.util.Arrays;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 /**
  * <p>
@@ -44,13 +43,16 @@ public class BudgetManagementController extends BaseController {
      * 获取预算管理列表
      */
     @Operation(summary = "获取预算管理列表")
-//    @RequiresPermissions("business:budgetManagement:list")
-    @GetMapping("/list")
-    public TableDataInfo list(BudgetManagementDTO budgetManagementDTO) {
-        startPage();
-        BudgetManagement budgetManagement = budgetManagementStructMapper.toEntity(budgetManagementDTO);
-        List<BudgetManagement> list = budgetManagementService.list(new QueryWrapper<>(budgetManagement));
-        return getDataTable(budgetManagementStructMapper.toDtoList(list));
+    @PostMapping("/list")
+    public PageResponse<BudgetManagementDTO> list(
+        @RequestBody BudgetManagementDTO budgetManagementDTO,
+        @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
+        @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize
+    ) {
+        Page<BudgetManagement> page = new Page<>(pageNum, pageSize);
+        budgetManagementDTO.setUserId(SecurityUtils.getUserId());
+        IPage<BudgetManagementDTO> result = budgetManagementService.list(budgetManagementDTO, page);
+        return PageResponse.success((int) result.getCurrent(), (int) result.getSize(), result.getRecords(), result.getTotal());
     }
 
     /**
@@ -72,6 +74,7 @@ public class BudgetManagementController extends BaseController {
     @Log(title = "预算管理", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@Validated @RequestBody BudgetManagementDTO budgetManagementDTO) {
+        budgetManagementDTO.setUserId(SecurityUtils.getUserId());
         BudgetManagement budgetManagement = budgetManagementStructMapper.toEntity(budgetManagementDTO);
         return toAjax(budgetManagementService.save(budgetManagement));
     }
@@ -84,6 +87,7 @@ public class BudgetManagementController extends BaseController {
     @Log(title = "预算管理", businessType = BusinessType.UPDATE)
     @PutMapping
     public AjaxResult edit(@Validated @RequestBody BudgetManagementDTO budgetManagementDTO) {
+        budgetManagementDTO.setUserId(SecurityUtils.getUserId());
         BudgetManagement budgetManagement = budgetManagementStructMapper.toEntity(budgetManagementDTO);
         return toAjax(budgetManagementService.updateById(budgetManagement));
     }

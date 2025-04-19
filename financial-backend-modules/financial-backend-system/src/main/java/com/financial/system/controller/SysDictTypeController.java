@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.financial.common.core.utils.poi.ExcelUtil;
+
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
 import com.financial.common.core.web.page.TableDataInfo;
@@ -49,15 +49,15 @@ public class SysDictTypeController extends BaseController {
         return getDataTable(list);
     }
 
-    @Operation(summary = "字典类型导出")
-    @Log(title = "字典类型", businessType = BusinessType.EXPORT)
-    @RequiresPermissions("system:dict:export")
-    @PostMapping("/export")
-    public void export(HttpServletResponse response, SysDictType dictType) {
-        List<SysDictType> list = dictTypeService.list(new QueryWrapper<SysDictType>(dictType));
-        ExcelUtil<SysDictType> util = new ExcelUtil<SysDictType>(SysDictType.class);
-        util.exportExcel(response, list, "字典类型");
-    }
+//    @Operation(summary = "字典类型导出")
+//    @Log(title = "字典类型", businessType = BusinessType.EXPORT)
+//    @RequiresPermissions("system:dict:export")
+//    @PostMapping("/export")
+//    public void export(HttpServletResponse response, SysDictType dictType) {
+//        List<SysDictType> list = dictTypeService.list(new QueryWrapper<SysDictType>(dictType));
+//        ExcelUtil<SysDictType> util = new ExcelUtil<SysDictType>(SysDictType.class);
+//        util.exportExcel(response, list, "字典类型");
+//    }
 
     /**
      * 查询字典类型详细

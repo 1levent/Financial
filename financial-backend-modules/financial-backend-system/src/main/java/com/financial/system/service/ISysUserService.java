@@ -151,4 +151,6 @@ public interface ISysUserService extends IService<SysUser> {
      * @return 结果
      */
     public String importUser(List<SysUser> userList, Boolean isUpdateSupport, String operName);
+
+    public SysUser getByThirdAccountId(String thirdAccountId);
 }

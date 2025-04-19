@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import com.financial.system.api.domain.SysUser;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 /**
  * 用户表 数据层
@@ -46,6 +47,7 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
      * @param avatar 头像地址
      * @return 结果
      */
+    @Update("update sys_user set avatar = #{avatar} where user_name = #{userName}")
     public int updateUserAvatar(@Param("userName") String userName, @Param("avatar") String avatar);
 
     /**
@@ -55,6 +57,7 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
      * @param password 密码
      * @return 结果
      */
+    @Update("update sys_user set password = #{password} where user_name = #{userName}")
     public int resetUserPwd(@Param("userName") String userName, @Param("password") String password);
 
 
@@ -64,6 +67,7 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
      * @param userName 用户名称
      * @return 结果
      */
+    @Select("select * from sys_user where user_name = #{userName}")
     public SysUser checkUserNameUnique(String userName);
 
     /**
@@ -72,6 +76,7 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
      * @param phonenumber 手机号码
      * @return 结果
      */
+    @Select("select * from sys_user where phonenumber = #{phonenumber}")
     public SysUser checkPhoneUnique(String phonenumber);
 
     /**
@@ -80,5 +85,14 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
      * @param email 用户邮箱
      * @return 结果
      */
+    @Select("select * from sys_user where email = #{email}")
     public SysUser checkEmailUnique(String email);
+
+    /**
+     * 根据第三方账号id查询用户
+     * @param thirdAccountId 第三方账户id
+     * @return 结果
+     */
+    @Select("select * from sys_user where third_account_id = #{thirdAccountId}")
+    public SysUser getByThirdAccountId(String thirdAccountId);
 }

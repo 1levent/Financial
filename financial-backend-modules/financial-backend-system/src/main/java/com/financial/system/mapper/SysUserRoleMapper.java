@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import com.financial.system.domain.SysUserRole;
 
 /**
@@ -21,8 +22,8 @@ public interface SysUserRoleMapper extends BaseMapper<SysUserRole> {
      * @param userId 用户ID
      * @return 结果
      */
+    @Delete("delete from sys_user_role where user_id = #{userId}")
     public int deleteUserRoleByUserId(Long userId);
-
 
     /**
      * 通过角色ID查询角色使用数量
@@ -30,6 +31,7 @@ public interface SysUserRoleMapper extends BaseMapper<SysUserRole> {
      * @param roleId 角色ID
      * @return 结果
      */
+    @Select("select count(*) from sys_user_role where role_id = #{roleId}")
     public int countUserRoleByRoleId(Long roleId);
 
     /**

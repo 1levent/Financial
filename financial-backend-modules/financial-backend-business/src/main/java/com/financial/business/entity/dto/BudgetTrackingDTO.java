@@ -1,6 +1,7 @@
 package com.financial.business.entity.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.time.LocalDate;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -13,14 +14,20 @@ import java.math.BigDecimal;
 @Schema(description = "预算跟踪数据传输对象")
 public class BudgetTrackingDTO {
 
-    @Schema(description = "预算跟踪ID")
+    @Schema(description = "ID")
     private Long id;
+
+    @Schema(description = "用户id")
+    private Long userId;
+
+    @Schema(description = "预算ID")
+    private Long budgetId;
 
     @Schema(description = "预算名称")
     private String name;
 
     @Schema(description = "预算类型编码")
-    private Long budgetTypeCode;
+    private Long typeCode;
 
     @Schema(description = "预算金额")
     private BigDecimal budgetAmount;
@@ -37,7 +44,10 @@ public class BudgetTrackingDTO {
     @Schema(description = "状态代码")
     private Long statusCode;
 
-    @Schema(description = "周期代码")
-    private Long periodCode;
+    @Schema(description = "开始日期")
+    private LocalDate startDate;
+
+    @Schema(description = "结束日期")
+    private LocalDate endDate;
 
 }

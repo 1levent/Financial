@@ -1,5 +1,6 @@
 package com.financial.system.api.factory;
 
+import com.financial.common.core.web.domain.AjaxResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.openfeign.FallbackFactory;
@@ -8,6 +9,9 @@ import com.financial.common.core.domain.R;
 import com.financial.system.api.RemoteUserService;
 import com.financial.system.api.domain.SysUser;
 import com.financial.system.api.model.LoginUser;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * 用户服务降级处理
@@ -35,6 +39,16 @@ public class RemoteUserFallbackFactory implements FallbackFactory<RemoteUserServ
             @Override
             public R<Boolean> recordUserLogin(SysUser sysUser, String source) {
                 return R.fail("记录用户登录信息失败:" + throwable.getMessage());
+            }
+
+            @Override
+            public R<LoginUser> getByThirdAccountId(String thirdAccountId){
+                return R.fail("获取第三方用户失败:" + throwable.getMessage());
+            }
+
+            @Override
+            public AjaxResult add(SysUser user){
+                return AjaxResult.error("新增用户失败:" + throwable.getMessage());
             }
         };
     }

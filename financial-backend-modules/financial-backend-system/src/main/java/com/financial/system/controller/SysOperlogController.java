@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.financial.common.core.utils.poi.ExcelUtil;
+
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
 import com.financial.common.core.web.page.TableDataInfo;
@@ -47,15 +47,15 @@ public class SysOperlogController extends BaseController {
         return getDataTable(list);
     }
 
-    @Operation(summary = "操作日志导出")
-    @Log(title = "操作日志", businessType = BusinessType.EXPORT)
-    @RequiresPermissions("system:operlog:export")
-    @PostMapping("/export")
-    public void export(HttpServletResponse response, SysOperLog operLog) {
-        List<SysOperLog> list = operLogService.list(new QueryWrapper<>(operLog));
-        ExcelUtil<SysOperLog> util = new ExcelUtil<SysOperLog>(SysOperLog.class);
-        util.exportExcel(response, list, "操作日志");
-    }
+//    @Operation(summary = "操作日志导出")
+//    @Log(title = "操作日志", businessType = BusinessType.EXPORT)
+//    @RequiresPermissions("system:operlog:export")
+//    @PostMapping("/export")
+//    public void export(HttpServletResponse response, SysOperLog operLog) {
+//        List<SysOperLog> list = operLogService.list(new QueryWrapper<>(operLog));
+//        ExcelUtil<SysOperLog> util = new ExcelUtil<SysOperLog>(SysOperLog.class);
+//        util.exportExcel(response, list, "操作日志");
+//    }
 
     @Operation(summary = "操作日志删除")
     @Log(title = "操作日志", businessType = BusinessType.DELETE)

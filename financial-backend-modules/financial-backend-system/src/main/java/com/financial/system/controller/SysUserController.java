@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import com.financial.common.core.domain.R;
 import com.financial.common.core.utils.StringUtils;
-import com.financial.common.core.utils.poi.ExcelUtil;
+
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
 import com.financial.common.core.web.page.TableDataInfo;
@@ -78,34 +78,34 @@ public class SysUserController extends BaseController {
         return getDataTable(list);
     }
 
-    @Operation(summary = "导出用户列表")
-    @Log(title = "用户管理", businessType = BusinessType.EXPORT)
-    @RequiresPermissions("system:user:export")
-    @PostMapping("/export")
-    public void export(HttpServletResponse response, SysUser user) {
-        List<SysUser> list = userService.list(new QueryWrapper<>(user));
-        ExcelUtil<SysUser> util = new ExcelUtil<SysUser>(SysUser.class);
-        util.exportExcel(response, list, "用户数据");
-    }
-
-    @Operation(summary = "导入用户数据")
-    @Log(title = "用户管理", businessType = BusinessType.IMPORT)
-    @RequiresPermissions("system:user:import")
-    @PostMapping("/importData")
-    public AjaxResult importData(MultipartFile file, boolean updateSupport) throws Exception {
-        ExcelUtil<SysUser> util = new ExcelUtil<SysUser>(SysUser.class);
-        List<SysUser> userList = util.importExcel(file.getInputStream());
-        String operName = SecurityUtils.getUsername();
-        String message = userService.importUser(userList, updateSupport, operName);
-        return success(message);
-    }
-
-    @Operation(summary = "导入用户模板")
-    @PostMapping("/importTemplate")
-    public void importTemplate(HttpServletResponse response) throws IOException {
-        ExcelUtil<SysUser> util = new ExcelUtil<SysUser>(SysUser.class);
-        util.importTemplateExcel(response, "用户数据");
-    }
+//    @Operation(summary = "导出用户列表")
+//    @Log(title = "用户管理", businessType = BusinessType.EXPORT)
+//    @RequiresPermissions("system:user:export")
+//    @PostMapping("/export")
+//    public void export(HttpServletResponse response, SysUser user) {
+//        List<SysUser> list = userService.list(new QueryWrapper<>(user));
+//        ExcelUtil<SysUser> util = new ExcelUtil<SysUser>(SysUser.class);
+//        util.exportExcel(response, list, "用户数据");
+//    }
+//
+//    @Operation(summary = "导入用户数据")
+//    @Log(title = "用户管理", businessType = BusinessType.IMPORT)
+//    @RequiresPermissions("system:user:import")
+//    @PostMapping("/importData")
+//    public AjaxResult importData(MultipartFile file, boolean updateSupport) throws Exception {
+//        ExcelUtil<SysUser> util = new ExcelUtil<SysUser>(SysUser.class);
+//        List<SysUser> userList = util.importExcel(file.getInputStream());
+//        String operName = SecurityUtils.getUsername();
+//        String message = userService.importUser(userList, updateSupport, operName);
+//        return success(message);
+//    }
+//
+//    @Operation(summary = "导入用户模板")
+//    @PostMapping("/importTemplate")
+//    public void importTemplate(HttpServletResponse response) throws IOException {
+//        ExcelUtil<SysUser> util = new ExcelUtil<SysUser>(SysUser.class);
+//        util.importTemplateExcel(response, "用户数据");
+//    }
 
     /**
      * 获取当前用户信息
@@ -114,7 +114,6 @@ public class SysUserController extends BaseController {
     @InnerAuth
     @GetMapping("/info/{username}")
     public R<LoginUser> info(@PathVariable("username") String username) {
-        System.out.println("测试："+username);
         SysUser sysUser = userService.selectUserByUserName(username);
         if (StringUtils.isNull(sysUser)) {
             return R.fail("用户名或密码错误");
@@ -138,9 +137,9 @@ public class SysUserController extends BaseController {
     @PostMapping("/register")
     public R<Boolean> register(@RequestBody SysUser sysUser) {
         String username = sysUser.getUserName();
-        if (!("true".equals(configService.selectConfigByKey("sys.account.registerUser")))) {
-            return R.fail("当前系统没有开启注册功能！");
-        }
+//        if (!("true".equals(configService.selectConfigByKey("sys.account.registerUser")))) {
+//            return R.fail("当前系统没有开启注册功能！");
+//        }
         if (!userService.checkUserNameUnique(sysUser)) {
             return R.fail("保存用户'" + username + "'失败，注册账号已存在");
         }
@@ -209,7 +208,7 @@ public class SysUserController extends BaseController {
     @Log(title = "用户管理", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@Validated @RequestBody SysUser user) {
-        roleService.checkRoleDataScope(user.getRoleIds());
+//        roleService.checkRoleDataScope(user.getRoleIds());
         if (!userService.checkUserNameUnique(user)) {
             return error("新增用户'" + user.getUserName() + "'失败，登录账号已存在");
         } else if (StringUtils.isNotEmpty(user.getPhonenumber()) && !userService.checkPhoneUnique(user)) {
@@ -218,7 +217,9 @@ public class SysUserController extends BaseController {
             return error("新增用户'" + user.getUserName() + "'失败，邮箱账号已存在");
         }
         user.setCreateBy(SecurityUtils.getUsername());
-        user.setPassword(SecurityUtils.encryptPassword(user.getPassword()));
+        if(StringUtils.isNotEmpty(user.getPassword())){
+            user.setPassword(SecurityUtils.encryptPassword(user.getPassword()));
+        }
         return toAjax(userService.save(user));
     }
 
@@ -315,4 +316,20 @@ public class SysUserController extends BaseController {
         userService.insertUserAuth(userId, roleIds);
         return success();
     }
+
+    @Operation(summary = "根据第三方账号id获取用户信息")
+    @GetMapping("/getByThirdAccountId/{thirdAccountId}")
+    public R<LoginUser> getByThirdAccountId(@PathVariable("thirdAccountId") String thirdAccountId){
+        SysUser user = userService.getByThirdAccountId(thirdAccountId);
+        if(StringUtils.isNull(user)){
+            return R.fail("用户不存在");
+        }
+        // TODO 角色集合和权限集合
+        LoginUser loginUser = new LoginUser();
+        loginUser.setSysUser(user);
+        loginUser.setUserid(user.getUserId());
+        loginUser.setUsername(user.getUserName());
+        return R.ok(loginUser);
+    }
+
 }

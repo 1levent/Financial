@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.financial.common.core.utils.poi.ExcelUtil;
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
 import com.financial.common.core.web.page.TableDataInfo;
@@ -52,15 +51,15 @@ public class SysConfigController extends BaseController {
     }
 
 
-    @Operation(summary = "导出参数配置列表")
-    @Log(title = "参数管理", businessType = BusinessType.EXPORT)
-    @RequiresPermissions("system:config:export")
-    @PostMapping("/export")
-    public void export(HttpServletResponse response, SysConfig config) {
-        List<SysConfig> list = configService.list();
-        ExcelUtil<SysConfig> util = new ExcelUtil<SysConfig>(SysConfig.class);
-        util.exportExcel(response, list, "参数数据");
-    }
+//    @Operation(summary = "导出参数配置列表")
+//    @Log(title = "参数管理", businessType = BusinessType.EXPORT)
+//    @RequiresPermissions("system:config:export")
+//    @PostMapping("/export")
+//    public void export(HttpServletResponse response, SysConfig config) {
+//        List<SysConfig> list = configService.list();
+//        ExcelUtil<SysConfig> util = new ExcelUtil<SysConfig>(SysConfig.class);
+//        util.exportExcel(response, list, "参数数据");
+//    }
 
     /**
      * 根据参数编号获取详细信息

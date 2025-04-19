@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import com.financial.common.core.constant.UserConstants;
 import com.financial.common.core.utils.StringUtils;
@@ -38,9 +39,8 @@ public class SysDictTypeServiceImpl extends ServiceImpl<SysDictTypeMapper, SysDi
     /**
      * 项目启动时，初始化字典到缓存
      */
-    @PostConstruct
-    public void init()
-    {
+//    @PostConstruct
+    public void init(){
         loadingDictCache();
     }
 
@@ -49,6 +49,7 @@ public class SysDictTypeServiceImpl extends ServiceImpl<SysDictTypeMapper, SysDi
      */
     @Override
     public void loadingDictCache() {
+        System.out.println("加载了字典到redis");
         QueryWrapper<SysDictData> query = new QueryWrapper<>();
         query.eq("status", "0");
         Map<String, List<SysDictData>> dictDataMap  = dictDataService.list(query).stream()

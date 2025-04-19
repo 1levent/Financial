@@ -1,7 +1,6 @@
 package com.financial.system.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import java.util.List;
 import com.financial.system.api.domain.SysDictData;
 
 /**
@@ -11,4 +10,5 @@ import com.financial.system.api.domain.SysDictData;
  */
 public interface ISysDictDataService extends IService<SysDictData> {
 
+  boolean addDict(SysDictData dict);
 }

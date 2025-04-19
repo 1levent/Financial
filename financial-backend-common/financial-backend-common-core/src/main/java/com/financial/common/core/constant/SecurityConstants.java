@@ -45,4 +45,9 @@ public class SecurityConstants {
      * 角色权限
      */
     public static final String ROLE_PERMISSION = "role_permission";
+
+    /**
+     * 设备id
+     */
+    public static final String DEVICE_ID = "device_id";
 }

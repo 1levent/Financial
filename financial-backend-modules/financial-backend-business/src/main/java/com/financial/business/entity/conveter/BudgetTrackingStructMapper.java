@@ -1,9 +1,14 @@
 package com.financial.business.entity.conveter;
 
+import com.financial.business.entity.BudgetManagement;
 import com.financial.business.entity.BudgetTracking;
 import com.financial.business.entity.dto.BudgetTrackingDTO;
+import com.financial.business.service.IBudgetManagementService;
+import jakarta.annotation.Resource;
 import java.util.List;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 import org.mapstruct.factory.Mappers;
 
 /**
@@ -26,4 +31,5 @@ public interface BudgetTrackingStructMapper {
 
     //转化成entity列表
     List<BudgetTracking> toEntityList(List<BudgetTrackingDTO> dtos);
+
 }

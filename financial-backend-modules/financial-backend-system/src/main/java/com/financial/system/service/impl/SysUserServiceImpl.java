@@ -350,4 +350,9 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         return successMsg.toString();
     }
 
+    @Override
+    public SysUser getByThirdAccountId(String thirdAccountId) {
+        return userMapper.getByThirdAccountId(thirdAccountId);
+    }
+
 }

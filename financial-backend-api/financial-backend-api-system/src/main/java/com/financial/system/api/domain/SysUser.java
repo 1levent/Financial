@@ -9,9 +9,6 @@ import java.util.Date;
 import java.util.List;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import com.financial.common.core.annotation.Excel;
-import com.financial.common.core.annotation.Excel.ColumnType;
-import com.financial.common.core.annotation.Excel.Type;
 import com.financial.common.core.web.domain.BaseEntity;
 import org.apache.ibatis.type.JdbcType;
 
@@ -29,32 +26,26 @@ public class SysUser extends BaseEntity {
 
     /** 用户ID */
     @TableId(type = IdType.AUTO)
-    @Excel(name = "用户序号", type = Type.EXPORT, cellType = ColumnType.NUMERIC, prompt = "用户编号")
     private Long userId;
 
     /** 用户账号 */
     @TableField(value = "user_name",jdbcType = JdbcType.VARCHAR)
-    @Excel(name = "登录名称")
     private String userName;
 
     /** 用户昵称 */
     @TableField(value = "nick_name",jdbcType = JdbcType.VARCHAR)
-    @Excel(name = "用户名称")
     private String nickName;
 
     /** 用户邮箱 */
     @TableField(value = "email",jdbcType = JdbcType.VARCHAR)
-    @Excel(name = "用户邮箱")
     private String email;
 
     /** 手机号码 */
     @TableField(value = "phonenumber",jdbcType = JdbcType.VARCHAR)
-    @Excel(name = "手机号码", cellType = ColumnType.TEXT)
     private String phonenumber;
 
     /** 用户性别 */
     @TableField(value = "sex",jdbcType = JdbcType.CHAR)
-    @Excel(name = "用户性别", readConverterExp = "0=男,1=女,2=未知")
     private String sex;
 
     /** 用户头像 */
@@ -67,7 +58,6 @@ public class SysUser extends BaseEntity {
 
     /** 帐号状态（0正常 1停用） */
     @TableField(value = "status",jdbcType = JdbcType.CHAR)
-    @Excel(name = "帐号状态", readConverterExp = "0=正常,1=停用")
     private String status;
 
     /** 删除标志（0代表存在 1代表删除） */
@@ -76,13 +66,19 @@ public class SysUser extends BaseEntity {
 
     /** 最后登录IP */
     @TableField(value = "login_ip",jdbcType = JdbcType.VARCHAR)
-    @Excel(name = "最后登录IP", type = Type.EXPORT)
     private String loginIp;
 
     /** 最后登录时间 */
     @TableField(value = "login_date",jdbcType = JdbcType.TIMESTAMP)
-    @Excel(name = "最后登录时间", width = 30, dateFormat = "yyyy-MM-dd HH:mm:ss", type = Type.EXPORT)
     private Date loginDate;
+
+    /** 第三方账号id */
+    @TableField(value = "third_account_id",jdbcType = JdbcType.VARCHAR)
+    private String thirdAccountId;
+
+    /** 登录方式 */
+    @TableField(value = "login_type",jdbcType = JdbcType.VARCHAR)
+    private String loginType;
 
     @TableField(exist = false)
     /** 角色对象 */

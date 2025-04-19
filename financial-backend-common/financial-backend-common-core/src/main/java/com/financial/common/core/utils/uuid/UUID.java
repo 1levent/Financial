@@ -1,5 +1,6 @@
 package com.financial.common.core.utils.uuid;
 
+import java.io.Serial;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -13,6 +14,7 @@ import com.financial.common.core.exception.UtilException;
  * @author xinyi
  */
 public final class UUID implements java.io.Serializable, Comparable<UUID> {
+    @Serial
     private static final long serialVersionUID = -1185015143654744140L;
 
     /**

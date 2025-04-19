@@ -2,6 +2,9 @@ package com.financial.gateway.filter;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
 import jakarta.annotation.Resource;
+import java.net.URI;
+import java.util.HashMap;
+import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -42,6 +45,7 @@ public class AuthFilter implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest request = exchange.getRequest();
+
         Builder mutate = request.mutate();
 
         String url = request.getURI().getPath();
@@ -49,6 +53,7 @@ public class AuthFilter implements GlobalFilter, Ordered {
         if (StringUtils.matches(url, ignoreWhite.getWhites())) {
             return chain.filter(exchange);
         }
+        //token鉴权
         String token = getToken(request);
         if (StringUtils.isEmpty(token)) {
             return unauthorizedResponse(exchange, "令牌不能为空");
@@ -64,6 +69,7 @@ public class AuthFilter implements GlobalFilter, Ordered {
         }
         String userid = JwtUtils.getUserId(jwt);
         String username = JwtUtils.getUserName(jwt);
+
         if (StringUtils.isEmpty(userid) || StringUtils.isEmpty(username)) {
             return unauthorizedResponse(exchange, "令牌验证失败");
         }
@@ -74,7 +80,31 @@ public class AuthFilter implements GlobalFilter, Ordered {
         addHeader(mutate, SecurityConstants.DETAILS_USERNAME, username);
         // 内部请求来源参数清除
         removeHeader(mutate, SecurityConstants.FROM_SOURCE);
-        return chain.filter(exchange.mutate().request(mutate.build()).build());
+
+        //接口调用耗时统计
+        //记录开始时间
+        exchange.getAttributes().put("startTime", System.currentTimeMillis());
+        return chain.filter(exchange).then(Mono.fromRunnable(() -> {
+            try{
+                //记录接口访问日志
+                Long beginVisitTime = exchange.getAttribute("startTime");
+                if(beginVisitTime!=null){
+                    URI uri = exchange.getRequest().getURI();
+                    Map<String,Object> logData = new HashMap<>();
+                    logData.put("host",uri.getHost());
+                    logData.put("port",uri.getPort());
+                    logData.put("path",uri.getPath());
+                    logData.put("query",uri.getRawQuery());
+                    logData.put("duration",(System.currentTimeMillis()-beginVisitTime)+"ms");
+
+                    log.info("接口访问信息：{}",logData);
+                    log.info("----------------------------------\n");
+                }
+            }catch (Exception e){
+                log.error("接口调用耗时统计异常",e);
+            }
+        }));
+//        return chain.filter(exchange.mutate().request(mutate.build()).build());
     }
 
     private void addHeader(ServerHttpRequest.Builder mutate, String name, Object value) {

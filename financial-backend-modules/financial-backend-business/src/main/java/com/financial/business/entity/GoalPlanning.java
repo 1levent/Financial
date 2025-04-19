@@ -32,17 +32,14 @@ public class GoalPlanning extends BaseEntity {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
+    @Schema(description = "用户id")
+    private Long userId;
+
     @Schema(description="目标名称")
     private String name;
 
-    @Schema(description="目标类型编码")
-    private Long goalTypeCode;
-
     @Schema(description="目标金额")
     private BigDecimal targetAmount;
-
-    @Schema(description="当前金额")
-    private BigDecimal currentAmount;
 
     @Schema(description="开始日期")
     private LocalDate startDate;

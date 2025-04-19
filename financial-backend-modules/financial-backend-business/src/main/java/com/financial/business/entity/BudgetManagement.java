@@ -31,6 +31,9 @@ public class BudgetManagement extends BaseEntity {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
+    @Schema(description = "用户id")
+    private Long userId;
+
     @Schema(description="预算名称")
     private String name;
 
@@ -41,7 +44,7 @@ public class BudgetManagement extends BaseEntity {
     private BigDecimal budgetAmount;
 
     @Schema(description="预算周期")
-    private String budgetPeriod;
+    private String periodCode;
 
     @Schema(description="预警阈值（百分比）")
     private BigDecimal warningThreshold;
@@ -49,7 +52,7 @@ public class BudgetManagement extends BaseEntity {
     @Schema(description="是否结转")
     private Byte rollover;
 
-    @Schema(description="状态代码")
-    private Long statusCode;
+    @Schema(description="是否启用")
+    private Byte enabled;
 
 }

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.financial.common.core.constant.CacheConstants;
-import com.financial.common.core.utils.poi.ExcelUtil;
+
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
 import com.financial.common.core.web.page.TableDataInfo;
@@ -52,15 +52,15 @@ public class SysLogininforController extends BaseController {
         return getDataTable(list);
     }
 
-    @Operation(summary = "登录日志导出")
-    @Log(title = "登录日志", businessType = BusinessType.EXPORT)
-    @RequiresPermissions("system:logininfor:export")
-    @PostMapping("/export")
-    public void export(HttpServletResponse response, SysLogininfor logininfor) {
-        List<SysLogininfor> list = logininforService.list(new QueryWrapper<>(logininfor));
-        ExcelUtil<SysLogininfor> util = new ExcelUtil<SysLogininfor>(SysLogininfor.class);
-        util.exportExcel(response, list, "登录日志");
-    }
+//    @Operation(summary = "登录日志导出")
+//    @Log(title = "登录日志", businessType = BusinessType.EXPORT)
+//    @RequiresPermissions("system:logininfor:export")
+//    @PostMapping("/export")
+//    public void export(HttpServletResponse response, SysLogininfor logininfor) {
+//        List<SysLogininfor> list = logininforService.list(new QueryWrapper<>(logininfor));
+//        ExcelUtil<SysLogininfor> util = new ExcelUtil<SysLogininfor>(SysLogininfor.class);
+//        util.exportExcel(response, list, "登录日志");
+//    }
 
     @Operation(summary = "登录日志删除")
     @RequiresPermissions("system:logininfor:remove")

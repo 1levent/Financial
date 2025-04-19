@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.financial.common.core.utils.poi.ExcelUtil;
+
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
 import com.financial.common.core.web.page.TableDataInfo;
@@ -54,15 +54,15 @@ public class SysRoleController extends BaseController {
         return getDataTable(list);
     }
 
-    @Operation(summary = "角色导出")
-    @Log(title = "角色管理", businessType = BusinessType.EXPORT)
-    @RequiresPermissions("system:role:export")
-    @PostMapping("/export")
-    public void export(HttpServletResponse response, SysRole role) {
-        List<SysRole> list = roleService.list(new QueryWrapper<>(role));
-        ExcelUtil<SysRole> util = new ExcelUtil<SysRole>(SysRole.class);
-        util.exportExcel(response, list, "角色数据");
-    }
+//    @Operation(summary = "角色导出")
+//    @Log(title = "角色管理", businessType = BusinessType.EXPORT)
+//    @RequiresPermissions("system:role:export")
+//    @PostMapping("/export")
+//    public void export(HttpServletResponse response, SysRole role) {
+//        List<SysRole> list = roleService.list(new QueryWrapper<>(role));
+//        ExcelUtil<SysRole> util = new ExcelUtil<SysRole>(SysRole.class);
+//        util.exportExcel(response, list, "角色数据");
+//    }
 
     /**
      * 根据角色编号获取详细信息

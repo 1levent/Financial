@@ -1,6 +1,18 @@
 package com.financial.auth.service;
 
+import com.financial.common.core.context.SecurityContextHolder;
+import com.financial.common.core.utils.JsonUtil;
+import com.financial.common.core.utils.JwtUtils;
+import com.financial.common.core.utils.MapUtils;
+import com.financial.common.core.utils.id.SelfTraceIdGenerator;
+import com.financial.common.security.service.TokenService;
+import com.financial.system.api.model.UserSaveReq;
 import jakarta.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import com.financial.common.core.constant.CacheConstants;
 import com.financial.common.core.constant.Constants;
@@ -26,6 +38,10 @@ import com.financial.system.api.model.LoginUser;
  */
 @Component
 public class SysLoginService {
+
+    //打印日志
+    private static final Logger log = LoggerFactory.getLogger(SysLoginService.class);
+
     @Resource
     private RemoteUserService remoteUserService;
 
@@ -37,6 +53,9 @@ public class SysLoginService {
 
     @Resource
     private RedisService redisService;
+
+    @Resource
+    private TokenService tokenService;
 
     /**
      * 登录
@@ -136,5 +155,60 @@ public class SysLoginService {
             throw new ServiceException(registerResult.getMsg());
         }
         recordLogService.recordLogininfor(username, Constants.REGISTER, "注册成功");
+    }
+
+    /**
+     * 微信登录
+     * @param userName 用户账号
+     * @return token
+     */
+    public String loginByWx(String userName) {
+        LoginUser loginUser = remoteUserService.getUserInfo(userName, SecurityConstants.INNER).getData();
+        Map<String, Object> map = tokenService.createToken(loginUser);
+        return map.get("access_token").toString();
+    }
+
+    /**
+     * 自动注册微信一个用户
+     * @param uuid 微信唯一标识
+     * @return userId 用户主键
+     */
+    public String autoRegisterWxUserInfo(String uuid) {
+        UserSaveReq req = new UserSaveReq().setLoginType(1).setThirdAccountId(uuid);
+        String userName = registerOrGetUserInfo(req);
+        SecurityContextHolder.setUserName(userName);
+        return userName;
+    }
+
+    /**
+     * 没有注册时，先注册一个用户；若已经有，则登录
+     * @param req 用户入参
+     */
+    private String registerOrGetUserInfo(UserSaveReq req) {
+
+        LoginUser user = remoteUserService.getByThirdAccountId(req.getThirdAccountId()).getData();
+        if (user == null) {
+            return registerByWechat(req.getThirdAccountId());
+        }
+        return user.getUsername();
+    }
+
+    /**
+     * 通过微信注册
+     * @param thirdAccountId 微信唯一标识
+     * @return userId
+     */
+    private String registerByWechat(String thirdAccountId) {
+
+        // 用户不存在，则需要注册
+        // 1. 保存用户登录信息
+        SysUser sysUser = new SysUser();
+        sysUser.setThirdAccountId(thirdAccountId);
+        sysUser.setLoginType("1");
+        sysUser.setUserName(thirdAccountId);
+        sysUser.setNickName(thirdAccountId);
+        remoteUserService.add(sysUser);
+        LoginUser loginUser = remoteUserService.getByThirdAccountId(thirdAccountId).getData();
+        return loginUser.getUsername();
     }
 }

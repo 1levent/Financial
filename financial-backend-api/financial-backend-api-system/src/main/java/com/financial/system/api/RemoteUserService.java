@@ -1,6 +1,8 @@
 package com.financial.system.api;
 
+import com.financial.common.core.web.domain.AjaxResult;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -50,4 +52,18 @@ public interface RemoteUserService {
      */
     @PutMapping("/user/recordlogin")
     public R<Boolean> recordUserLogin(@RequestBody SysUser sysUser, @RequestHeader(SecurityConstants.FROM_SOURCE) String source);
+
+    /**
+     * 通过第三方账号id查询用户信息
+     * @param thirdAccountId 第三方账户id
+     * @return 用户信息
+     */
+    @GetMapping("/user/getByThirdAccountId/{thirdAccountId}")
+    public R<LoginUser> getByThirdAccountId(@PathVariable("thirdAccountId") String thirdAccountId);
+
+    //新增用户
+    @PostMapping("/user")
+    public AjaxResult add(@Validated @RequestBody SysUser user);
+
+    //根据id获取用户信息
 }

@@ -71,14 +71,19 @@ public class SecurityContextHolder {
         set(SecurityConstants.USER_KEY, userKey);
     }
 
-    public static String getPermission()
-    {
+    public static String getPermission() {
         return get(SecurityConstants.ROLE_PERMISSION);
     }
 
-    public static void setPermission(String permissions)
-    {
+    public static void setPermission(String permissions) {
         set(SecurityConstants.ROLE_PERMISSION, permissions);
+    }
+
+    public static String getDeviceId() {
+        return get(SecurityConstants.DEVICE_ID);
+    }
+    public static void setDeviceId(String deviceId) {
+        set(SecurityConstants.DEVICE_ID, deviceId);
     }
 
     public static void remove()

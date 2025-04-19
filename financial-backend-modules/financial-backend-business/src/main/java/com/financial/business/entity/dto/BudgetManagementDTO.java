@@ -1,7 +1,9 @@
 package com.financial.business.entity.dto;
 
+import cn.idev.excel.annotation.ExcelProperty;
 import com.financial.common.security.annotation.Dict;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.util.List;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -17,6 +19,10 @@ public class BudgetManagementDTO {
     @Schema(description = "预算ID")
     private Long id;
 
+
+    @Schema(description = "用户id")
+    private Long userId;
+
     @Schema(description = "预算名称")
     private String name;
 
@@ -28,7 +34,7 @@ public class BudgetManagementDTO {
     private BigDecimal budgetAmount;
 
     @Schema(description = "预算周期")
-    private String budgetPeriod;
+    private String periodCode;
 
     @Schema(description = "预警阈值（百分比）")
     private BigDecimal warningThreshold;
@@ -36,7 +42,10 @@ public class BudgetManagementDTO {
     @Schema(description = "是否结转")
     private Byte rollover;
 
-    @Schema(description = "状态代码")
-    private Long statusCode;
+    @Schema(description="是否启用")
+    private Byte enabled;
+
+    @Schema(description = "预算ID集合")
+    private List<Long> ids;
 
 }

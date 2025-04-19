@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.financial.business.entity.IncomeExpenseRecords;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.financial.business.entity.dto.IncomeExpenseRecordsDTO;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * <p>
@@ -18,4 +19,6 @@ import com.financial.business.entity.dto.IncomeExpenseRecordsDTO;
 public interface IIncomeExpenseRecordsService extends IService<IncomeExpenseRecords> {
 
   public IPage<IncomeExpenseRecordsDTO> list(IncomeExpenseRecordsDTO dto, Page<IncomeExpenseRecords> page);
+
+  void export(IncomeExpenseRecordsDTO incomeExpenseRecordsDTO, HttpServletResponse response);
 }
