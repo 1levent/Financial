@@ -1,0 +1,12 @@
+2025-05-10 16:30:07,525 INFO [capacityManagement] start correct usage
+
+2025-05-10 16:30:07,556 INFO [capacityManagement] end correct usage, cost: 0.018933926s
+
+2025-05-10 16:30:08,629 WARN clearHistoryConfig get scheduled
+
+2025-05-10 16:30:08,635 WARN clearHistoryConfig is enable in current context, try to run cleaner
+
+2025-05-10 16:30:08,649 WARN clearConfigHistory, getBeforeStamp:2025-04-10 16:30:08.0, pageSize:1000
+
+2025-05-10 16:30:08,679 WARN history config cleaner successfully
+

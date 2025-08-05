@@ -1,0 +1,2 @@
+2025-05-27 01:39:12,177 INFO [PUSH-SUCC] 30ms, all delay time 591ms for subscriber 192.168.75.1, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-system', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+

@@ -1,0 +1,12 @@
+2025-05-10 16:28:07,138 INFO [PUSH-SUCC] 98ms, all delay time 647ms, SLA 660ms, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-system', ephemeral=true, revision=4}, originalSize=0, DataSize=0, target=192.168.75.1
+
+2025-05-10 16:28:07,278 INFO [PUSH-SUCC] 242ms, all delay time 787ms, SLA 800ms, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-system', ephemeral=true, revision=4}, originalSize=0, DataSize=0, target=192.168.75.1
+
+2025-05-10 16:28:07,279 INFO [PUSH-SUCC] 239ms, all delay time 788ms, SLA 801ms, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-system', ephemeral=true, revision=4}, originalSize=0, DataSize=0, target=192.168.75.1
+
+2025-05-10 16:28:09,927 INFO [PUSH-SUCC] 26ms, all delay time 599ms, SLA 599ms, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-system', ephemeral=true, revision=5}, originalSize=1, DataSize=1, target=192.168.75.1
+
+2025-05-10 16:28:09,934 INFO [PUSH-SUCC] 35ms, all delay time 606ms, SLA 606ms, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-system', ephemeral=true, revision=5}, originalSize=1, DataSize=1, target=192.168.75.1
+
+2025-05-10 16:28:09,951 INFO [PUSH-SUCC] 50ms, all delay time 623ms, SLA 623ms, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-system', ephemeral=true, revision=5}, originalSize=1, DataSize=1, target=192.168.75.1
+

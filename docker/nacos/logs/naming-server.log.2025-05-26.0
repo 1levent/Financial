@@ -1,0 +1,26 @@
+2025-05-26 22:03:05,870 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2025-05-26 22:03:05,870 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2025-05-26 22:03:05,871 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2025-05-26 22:03:05,871 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2025-05-26 22:03:06,287 INFO Load instance extension handler []
+
+2025-05-26 22:21:59,396 INFO Client connection 1748269319381_172.18.0.1_57774 connect
+
+2025-05-26 22:21:59,437 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-auth', ephemeral=true, revision=0}, 1748269319381_172.18.0.1_57774
+
+2025-05-26 22:22:26,600 INFO Client connection 1748269346591_172.18.0.1_59104 connect
+
+2025-05-26 22:22:26,617 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-gateway', ephemeral=true, revision=0}, 1748269346591_172.18.0.1_59104
+
+2025-05-26 22:23:01,584 INFO Client connection 1748269381574_172.18.0.1_33660 connect
+
+2025-05-26 22:23:01,607 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-system', ephemeral=true, revision=0}, 1748269381574_172.18.0.1_33660
+
+2025-05-26 22:26:20,851 INFO Client connection 1748269580805_172.18.0.1_55640 connect
+
+2025-05-26 22:26:20,886 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-business', ephemeral=true, revision=0}, 1748269580805_172.18.0.1_55640
+

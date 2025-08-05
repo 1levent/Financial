@@ -1,0 +1,12 @@
+2025-05-26 22:22:26,755 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-gateway', ephemeral=true, revision=1}
+
+2025-05-26 22:22:27,197 INFO [PUSH-SUCC] 19ms, all delay time 578ms, SLA 578ms, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-gateway', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=192.168.75.1
+
+2025-05-26 22:22:27,282 INFO [PUSH-SUCC] 6ms, all delay time 526ms for subscriber 192.168.75.1, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-auth', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-05-26 22:23:27,470 INFO [PUSH-SUCC] 7ms, all delay time 556ms for subscriber 192.168.75.1, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-system', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-05-26 22:26:27,782 INFO [PUSH-SUCC] 269ms, all delay time 812ms for subscriber 192.168.75.1, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-business', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-05-26 22:30:29,626 INFO [PUSH-SUCC] 7ms, all delay time 561ms for subscriber 192.168.75.1, Service{namespace='public', group='DEFAULT_GROUP', name='financial-backend-system', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+

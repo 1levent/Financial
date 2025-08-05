@@ -1,0 +1,1154 @@
+2025-05-10 16:32:25,304 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-10 16:32:24,672 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:07:09,741 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:07:09,171 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:07:09,792 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:07:08,480 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:07:10,255 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:08,670 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:08,684 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:08,767 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:08,793 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:08,944 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:08,956 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:09,102 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:09,107 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:13,745 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:13,755 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:14,114 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:14,122 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:14,664 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:14,685 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:14,818 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:14,821 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:18,987 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:18,990 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:19,162 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:19,164 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:19,889 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:19,890 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:20,540 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:20,543 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:24,624 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:24,625 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:24,892 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:24,893 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:25,233 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:25,234 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:25,577 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:25,578 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:30,090 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:30,091 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:30,331 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:30,332 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:30,867 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:30,867 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:31,328 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:31,328 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:35,409 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:35,410 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:36,232 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:36,233 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:36,333 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:36,333 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:36,987 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:36,987 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:41,190 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:41,191 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:41,835 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:41,835 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:42,105 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:42,106 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:42,312 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:42,313 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:42,991 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:42,992 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:43,907 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:43,908 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:43,915 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:43,915 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:44,174 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:44,174 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:48,193 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:48,193 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:49,408 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:49,409 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:49,651 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:49,651 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:49,673 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:49,673 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:54,162 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:54,163 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:54,723 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:54,724 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:54,783 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:54,783 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:54,842 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:54,842 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:16:59,914 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:16:59,915 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:00,028 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:00,029 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:00,557 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:00,557 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:00,569 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:00,569 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:05,381 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:05,383 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:05,695 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:05,695 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:06,049 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:06,049 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:06,203 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:06,204 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:11,291 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:11,303 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:11,313 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:11,314 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:11,769 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:11,769 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:11,861 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:11,861 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:16,499 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:16,500 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:16,619 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:16,619 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:16,950 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:16,950 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:17,629 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:17,629 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:22,083 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:22,084 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:22,306 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:22,307 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:22,641 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:22,641 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:23,435 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:23,435 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:27,421 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:27,422 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:27,771 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:27,771 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:28,168 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:28,169 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:28,871 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:28,871 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:32,930 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:32,930 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:33,309 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:33,309 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:33,988 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:33,988 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:34,048 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:34,049 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:38,260 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:38,261 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:39,136 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:39,137 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:39,211 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:39,211 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:39,562 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:39,562 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:43,750 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:43,751 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:44,651 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:44,651 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:44,897 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:44,897 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:45,030 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:45,031 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:48,931 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:48,932 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:50,267 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:50,267 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:50,419 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:50,419 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:50,753 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:50,754 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:53,941 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:53,941 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:55,761 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:55,762 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:55,797 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:55,797 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:55,873 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:55,874 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:17:59,000 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:17:59,001 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:00,829 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:00,830 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:01,067 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:01,067 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:01,444 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:01,445 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:04,052 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:04,052 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:06,156 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:06,157 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:06,537 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:06,538 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:06,820 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:06,820 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:09,382 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:09,383 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:11,208 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:11,209 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:11,837 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:11,837 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:12,504 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:12,505 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:14,746 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:14,747 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:16,620 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:16,621 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:17,684 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:17,685 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:17,738 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:17,738 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:19,999 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:20,000 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:22,088 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:22,089 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:23,343 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:23,343 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:23,351 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:23,352 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:25,046 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:25,046 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:27,643 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:27,644 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:28,643 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:28,643 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:28,773 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:28,774 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:30,292 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:30,292 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:32,752 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:32,752 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:34,177 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:34,178 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:34,620 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:34,620 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:35,496 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:35,496 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:38,460 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:38,461 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:40,003 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:40,004 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:40,102 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:40,103 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:41,426 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:41,429 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:43,750 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:43,751 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:45,032 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:45,033 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:45,437 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:45,438 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:46,555 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:46,556 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:48,966 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:48,967 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:50,678 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:50,679 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:51,398 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:51,399 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:52,395 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:52,396 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:54,431 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:54,432 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:56,635 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:56,636 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:56,778 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:56,779 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:58,000 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:58,001 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:18:59,831 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:18:59,832 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:02,201 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:02,202 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:02,301 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:02,301 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:03,094 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:03,095 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:05,727 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:05,727 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:07,322 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:07,322 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:07,370 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:07,370 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:09,063 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:09,063 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:11,561 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:11,566 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:12,959 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:12,960 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:13,034 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:13,034 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:14,504 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:14,505 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:16,628 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:16,629 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:18,754 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:18,754 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:18,926 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:18,927 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:19,521 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:19,522 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:21,720 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:21,720 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:24,590 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:24,590 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:24,689 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:24,689 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:25,451 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:25,452 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:27,050 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:27,050 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:30,171 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:30,171 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:30,209 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:30,210 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:31,163 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:31,164 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:32,705 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:32,706 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:35,691 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:35,692 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:35,735 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:35,735 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:36,220 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:36,220 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:38,655 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:38,656 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:40,765 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:40,766 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:41,250 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:41,250 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:41,776 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:41,777 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:44,382 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:44,383 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:46,268 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:46,269 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:46,448 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:46,449 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:47,514 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:47,515 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:49,895 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:49,895 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:51,560 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:51,560 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:52,247 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:52,248 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:53,194 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:53,194 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:55,231 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:55,231 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:57,179 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:57,179 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:57,865 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:57,865 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:19:58,291 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:19:58,291 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:00,271 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:00,272 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:02,221 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:02,221 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:03,009 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:03,010 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:03,334 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:03,334 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:05,527 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:05,528 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:08,064 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:08,064 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:08,202 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:08,202 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:08,959 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:08,959 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:10,798 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:10,798 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:13,758 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:13,759 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:14,070 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:14,071 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:14,758 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:14,759 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:16,088 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:16,088 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:19,542 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:19,543 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:19,736 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:19,736 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:20,504 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:20,504 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 00:20:22,017 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 00:20:22,018 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 06:14:27,035 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 06:14:27,116 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 06:14:27,173 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 06:14:27,176 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 06:14:27,841 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 06:14:27,864 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 06:14:29,690 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 06:14:29,711 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 06:17:28,441 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 06:17:28,443 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 06:17:29,155 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 06:17:29,160 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 06:17:29,706 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 06:17:29,707 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 06:17:31,479 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 06:17:31,480 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:17,355 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:17,377 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:18,571 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:18,757 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:19,784 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:19,856 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:20,433 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:20,450 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:44,008 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:44,017 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:46,303 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:46,306 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:46,748 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:46,750 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:47,554 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:47,561 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:49,890 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:49,892 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:52,087 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:52,094 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:52,095 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:52,116 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:53,230 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:53,234 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:55,605 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:55,606 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:57,521 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:57,522 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:57,881 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:57,881 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:19:58,684 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:19:58,685 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:00,754 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:00,755 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:03,370 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:03,370 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:03,748 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:03,749 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:03,808 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:03,808 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:05,899 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:05,900 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:08,913 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:08,915 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:09,314 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:09,314 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:09,669 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:09,669 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:11,159 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:11,160 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:14,452 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:14,453 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:14,530 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:14,530 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:14,694 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:14,695 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:16,313 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:16,314 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:20,005 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:20,006 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:20,301 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:20,302 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:20,378 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:20,379 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:21,927 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:21,928 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:25,138 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:25,139 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:25,409 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:25,413 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:25,514 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:25,515 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:27,886 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:27,886 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:30,404 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:30,405 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:31,143 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:31,144 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:31,425 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:31,425 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:33,117 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:33,118 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:36,146 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:36,147 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:36,715 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:36,716 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:36,802 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:36,803 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:38,829 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:38,830 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:41,538 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:41,539 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:41,924 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:41,925 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:42,200 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:42,200 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:43,957 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:43,958 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:46,682 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:46,683 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:47,242 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:47,242 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:47,687 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:47,688 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:49,131 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:49,131 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:51,739 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:51,741 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:53,199 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:53,396 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:20:53,635 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:20:53,638 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:07,288 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:07,293 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:09,221 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:09,223 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:10,786 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:10,787 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:11,804 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:11,805 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:13,106 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:13,106 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:14,905 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:14,905 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:16,627 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:16,627 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:16,840 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:16,843 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:18,677 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:18,678 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:20,812 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:20,813 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:21,967 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:21,968 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:22,604 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:22,605 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:23,690 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:23,691 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:26,354 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:26,355 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:27,791 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:27,792 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:27,898 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:27,899 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:28,839 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:28,840 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:31,888 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:31,888 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:32,977 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:32,978 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:33,456 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:33,457 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:34,324 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:34,324 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:37,105 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:37,106 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:38,427 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:38,428 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:39,158 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:39,159 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:39,628 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:39,629 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:42,545 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:42,546 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:44,393 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:44,393 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:44,925 INFO Node <naming_service_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:44,926 WARN Node <naming_service_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:45,029 INFO Node <naming_persistent_service/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:45,029 WARN Node <naming_persistent_service/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:48,142 INFO Node <naming_instance_metadata/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:48,142 WARN Node <naming_instance_metadata/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
+2025-05-11 16:21:50,021 INFO Node <naming_persistent_service_v2/172.18.0.4:7848> term 1 start preVote.
+
+2025-05-11 16:21:50,022 WARN Node <naming_persistent_service_v2/172.18.0.4:7848> can't do preVote as it is not in conf <ConfigurationEntry [id=LogId [index=1, term=1], conf=172.18.0.6:7848, oldConf=]>.
+
