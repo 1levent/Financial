@@ -3,10 +3,15 @@ package com.financial.business.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.financial.business.entity.Account;
 import com.financial.business.entity.HoldingDetails;
 import com.financial.business.entity.conveter.HoldingDetailsStructMapper;
 import com.financial.business.entity.dto.HoldingDetailsDTO;
+import com.financial.business.entity.dto.statistic.ProductBarDTO;
+import com.financial.business.entity.dto.statistic.ProductPieDTO;
+import com.financial.business.service.IAccountService;
 import com.financial.business.service.IHoldingDetailsService;
+import com.financial.common.core.domain.R;
 import com.financial.common.core.utils.excel.ExcelUtils;
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
@@ -20,6 +25,12 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletResponse;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Map;
+import java.util.stream.Collectors;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -46,6 +57,9 @@ public class HoldingDetailsController extends BaseController {
 
     @Resource
     private HoldingDetailsStructMapper holdingDetailsStructMapper;
+
+    @Resource
+    private IAccountService  accountService;
 
     /**
      * 获取持仓明细列表
@@ -80,8 +94,13 @@ public class HoldingDetailsController extends BaseController {
     @Operation(summary = "根据持仓明细编号获取详细信息")
 //    @RequiresPermissions("business:holdingDetails:query")
     @GetMapping(value = "/{id}")
-    public AjaxResult getInfo(@PathVariable Long id) {
-        return success(holdingDetailsService.getById(id));
+    public R<HoldingDetailsDTO> getInfo(@PathVariable Long id) {
+        HoldingDetails details = holdingDetailsService.getById(id);
+        if (details == null) {
+            return R.fail("该记录不存在");
+        }
+        HoldingDetailsDTO holdingDetailsDTO = holdingDetailsStructMapper.toDto(details);
+        return R.ok(holdingDetailsDTO);
     }
 
     /**
@@ -93,6 +112,16 @@ public class HoldingDetailsController extends BaseController {
     @PostMapping
     public AjaxResult add(@Validated @RequestBody HoldingDetailsDTO holdingDetailsDTO) {
         holdingDetailsDTO.setUserId(SecurityUtils.getUserId());
+        //todo 初始的成本就是持仓金额,不够后续卖出，成本可能会变化
+        holdingDetailsDTO.setCost(holdingDetailsDTO.getQuantity());
+        holdingDetailsDTO.setProfitLoss(BigDecimal.ZERO);
+        holdingDetailsDTO.setReturnRate(BigDecimal.ZERO);
+//        holdingDetailsDTO.setStartDate();
+        boolean flag = accountService.adjustAmount(holdingDetailsDTO.getAccountNo(), "-",
+            holdingDetailsDTO.getCost());
+        if (!flag) {
+            return error("账户余额不足");
+        }
         HoldingDetails holdingDetails = holdingDetailsStructMapper.toEntity(holdingDetailsDTO);
         return toAjax(holdingDetailsService.save(holdingDetails));
     }
@@ -119,5 +148,42 @@ public class HoldingDetailsController extends BaseController {
     @DeleteMapping("/{ids}")
     public AjaxResult remove(@PathVariable Long[] ids) {
         return toAjax(holdingDetailsService.removeBatchByIds(Arrays.asList(ids)));
+    }
+
+    @Operation(summary = "计算持仓明细统计")
+    @GetMapping("/statistics")
+    public R<List<ProductPieDTO>> statistics() {
+        HoldingDetails holdingDetails = new HoldingDetails();
+        holdingDetails.setUserId(SecurityUtils.getUserId());
+        List<HoldingDetails> list = holdingDetailsService.list(new QueryWrapper<>(holdingDetails));
+        List<ProductPieDTO> productPieDTOList = new ArrayList<>();
+        //统计每种类型的持仓金额
+        Map<String, Double> map = list.stream().collect(
+            Collectors.groupingBy(HoldingDetails::getType, Collectors.summingDouble(d -> d.getQuantity().doubleValue())));
+        for (Map.Entry<String, Double> entry : map.entrySet()) {
+            ProductPieDTO productPieDTO = new ProductPieDTO();
+            productPieDTO.setType(entry.getKey());
+            productPieDTO.setTotal(entry.getValue());
+            productPieDTOList.add(productPieDTO);
+        }
+        return R.ok(productPieDTOList);
+    }
+
+    @Operation(summary = "获取产品柱状图")
+    @GetMapping("/getProductBarDTOList")
+    public R<List<ProductBarDTO>> getProductBarDTOList() {
+        HoldingDetails holdingDetails = new HoldingDetails();
+        holdingDetails.setUserId(SecurityUtils.getUserId());
+        holdingDetails.setType("fund");
+        List<HoldingDetails> list = holdingDetailsService.list(new QueryWrapper<>(holdingDetails));
+        System.out.println("获得数据："+list);
+        List<ProductBarDTO> productBarDTOList = new ArrayList<>();
+        for (HoldingDetails details : list) {
+            ProductBarDTO productBarDTO = new ProductBarDTO();
+            productBarDTO.setName(details.getName());
+            productBarDTO.setTotal(details.getQuantity().doubleValue());
+            productBarDTOList.add(productBarDTO);
+        }
+        return R.ok(productBarDTOList);
     }
 }

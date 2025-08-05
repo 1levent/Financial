@@ -16,29 +16,29 @@ import java.time.LocalDate;
 @Schema(description = "持仓明细DTO")
 public class HoldingDetailsDTO {
 
-    @Schema(description="持仓明细ID")
+    @Schema(description="ID")
     private Long id;
 
     @Schema(description="用户ID")
     private Long userId;
 
-    @Schema(description="持仓明细代码")
+    @Schema(description="账户号")
+    private String accountNo;
+
+    @Schema(description="代码")
     private String code;
 
     @Schema(description="名称")
     private String name;
 
-    @Schema(description="类型编码")
-    private Long typeCode;
+    @Schema(description="类型")
+    private String type;
 
     @Schema(description="持仓金额")
     private BigDecimal quantity;
 
     @Schema(description="成本")
     private BigDecimal cost;
-
-    @Schema(description="市值")
-    private BigDecimal marketValue;
 
     @Schema(description="盈亏")
     private BigDecimal profitLoss;

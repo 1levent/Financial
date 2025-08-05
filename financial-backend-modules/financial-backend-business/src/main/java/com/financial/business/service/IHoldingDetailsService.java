@@ -6,6 +6,7 @@ import com.financial.business.entity.HoldingDetails;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.financial.business.entity.dto.HoldingDetailsDTO;
 import jakarta.servlet.http.HttpServletResponse;
+import java.math.BigDecimal;
 
 /**
  * <p>
@@ -16,6 +17,9 @@ import jakarta.servlet.http.HttpServletResponse;
  * @since 2025-03-28
  */
 public interface IHoldingDetailsService extends IService<HoldingDetails> {
-  public IPage<HoldingDetailsDTO> list(HoldingDetailsDTO dto, Page<HoldingDetails> page);
-  public void export(HoldingDetailsDTO dto, HttpServletResponse response);
+  IPage<HoldingDetailsDTO> list(HoldingDetailsDTO dto, Page<HoldingDetails> page);
+  void export(HoldingDetailsDTO dto, HttpServletResponse response);
+  HoldingDetails getByCode(String code);
+  BigDecimal getTradePrice(String code,BigDecimal shares);
+
 }

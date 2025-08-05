@@ -6,20 +6,21 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.financial.business.entity.LoanRecords;
 import com.financial.business.entity.conveter.LoanRecordsStructMapper;
 import com.financial.business.entity.dto.LoanRecordsDTO;
+import com.financial.business.entity.dto.statistic.LoanStatisticDTO;
 import com.financial.business.service.ILoanRecordsService;
+import com.financial.common.core.domain.R;
 import com.financial.common.core.utils.excel.ExcelUtils;
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
 import com.financial.common.core.web.page.PageResponse;
-import com.financial.common.core.web.page.TableDataInfo;
 import com.financial.common.log.annotation.Log;
 import com.financial.common.log.enums.BusinessType;
-import com.financial.common.security.annotation.RequiresPermissions;
 import com.financial.common.security.utils.SecurityUtils;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletResponse;
+import java.math.BigDecimal;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -80,8 +81,13 @@ public class LoanRecordsController extends BaseController {
     @Operation(summary = "根据借贷记录编号获取详细信息")
 //    @RequiresPermissions("business:loanRecords:query")
     @GetMapping(value = "/{id}")
-    public AjaxResult getInfo(@PathVariable Long id) {
-        return success(loanRecordsService.getById(id));
+    public R<LoanRecordsDTO> getInfo(@PathVariable Long id) {
+        LoanRecords loanRecords = loanRecordsService.getById(id);
+        if (loanRecords == null) {
+            return R.fail("该记录不存在");
+        }
+        LoanRecordsDTO loanRecordsDTO = loanRecordsStructMapper.toDto(loanRecords);
+        return R.ok(loanRecordsDTO);
     }
 
     /**
@@ -93,6 +99,9 @@ public class LoanRecordsController extends BaseController {
     @PostMapping
     public AjaxResult add(@Validated @RequestBody LoanRecordsDTO loanRecordsDTO) {
         loanRecordsDTO.setUserId(SecurityUtils.getUserId());
+        //根据本金、年利率、借款期限计算总利息，写一个方法来计算
+        BigDecimal totalInterest =loanRecordsService.calculateTotalInterest(loanRecordsDTO);
+        loanRecordsDTO.setTotalInterest(totalInterest);
         LoanRecords loanRecords = loanRecordsStructMapper.toEntity(loanRecordsDTO);
         return toAjax(loanRecordsService.save(loanRecords));
     }
@@ -106,6 +115,8 @@ public class LoanRecordsController extends BaseController {
     @PutMapping
     public AjaxResult edit(@Validated @RequestBody LoanRecordsDTO loanRecordsDTO) {
         loanRecordsDTO.setUserId(SecurityUtils.getUserId());
+        BigDecimal totalInterest =loanRecordsService.calculateTotalInterest(loanRecordsDTO);
+        loanRecordsDTO.setTotalInterest(totalInterest);
         LoanRecords loanRecords = loanRecordsStructMapper.toEntity(loanRecordsDTO);
         return toAjax(loanRecordsService.updateById(loanRecords));
     }
@@ -119,5 +130,14 @@ public class LoanRecordsController extends BaseController {
     @DeleteMapping("/{ids}")
     public AjaxResult remove(@PathVariable Long[] ids) {
         return toAjax(loanRecordsService.removeBatchByIds(Arrays.asList(ids)));
+    }
+
+    @Operation(summary = "计算借贷记录统计信息")
+    @GetMapping("/calculateLoanStatistics")
+    public R<LoanStatisticDTO> calculateLoanStatistics() {
+        LoanRecords loan = new LoanRecords();
+        loan.setUserId(SecurityUtils.getUserId());
+        List<LoanRecords> list = loanRecordsService.list(new QueryWrapper<>(loan));
+        return R.ok(loanRecordsService.calculateLoanStatistics(list));
     }
 }

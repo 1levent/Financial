@@ -7,6 +7,7 @@ import com.financial.business.entity.GoalPlanning;
 import com.financial.business.entity.conveter.GoalPlanningStructMapper;
 import com.financial.business.entity.dto.GoalPlanningDTO;
 import com.financial.business.service.IGoalPlanningService;
+import com.financial.common.core.domain.R;
 import com.financial.common.core.utils.excel.ExcelUtils;
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
@@ -20,6 +21,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletResponse;
+import java.math.BigDecimal;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -80,8 +82,13 @@ public class GoalPlanningController extends BaseController {
     @Operation(summary = "根据目标规划编号获取详细信息")
 //    @RequiresPermissions("business:goalPlanning:query")
     @GetMapping(value = "/{id}")
-    public AjaxResult getInfo(@PathVariable Long id) {
-        return success(goalPlanningService.getById(id));
+    public R<GoalPlanningDTO> getInfo(@PathVariable Long id) {
+        GoalPlanning goalPlanning = goalPlanningService.getById(id);
+        if (goalPlanning == null) {
+            return R.fail("目标规划不存在");
+        }
+        GoalPlanningDTO goalPlanningDTO = goalPlanningStructMapper.toDto(goalPlanning);
+        return R.ok(goalPlanningDTO);
     }
 
     /**
@@ -93,6 +100,9 @@ public class GoalPlanningController extends BaseController {
     @PostMapping
     public AjaxResult add(@Validated @RequestBody GoalPlanningDTO goalPlanningDTO) {
         goalPlanningDTO.setUserId(SecurityUtils.getUserId());
+        goalPlanningDTO.setStatus("进行中");
+        goalPlanningDTO.setPriority("中");
+        goalPlanningDTO.setCurrentAmount(BigDecimal.ZERO);
         GoalPlanning goalPlanning = goalPlanningStructMapper.toEntity(goalPlanningDTO);
         return toAjax(goalPlanningService.save(goalPlanning));
     }

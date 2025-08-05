@@ -20,4 +20,9 @@ public class ServiceNameConstants {
      * 文件服务的serviceid
      */
     public static final String FILE_SERVICE = "financial-backend-file";
+
+    /**
+     * 任务调度服务的serviceid
+     */
+    public static final String JOB_SERVICE = "financial-backend-job";
 }

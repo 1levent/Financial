@@ -14,6 +14,7 @@ import com.financial.common.core.utils.excel.AutoColumnWidthStyle;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -52,5 +53,32 @@ public class HoldingDetailsServiceImpl extends ServiceImpl<HoldingDetailsMapper,
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * 通过产品代码来获取持仓明细
+     * @param code
+     * @return
+     */
+    @Override
+    public HoldingDetails getByCode(String code) {
+        QueryWrapper<HoldingDetails> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("code", code);
+        if (getOne(queryWrapper) != null) {
+            return getOne(queryWrapper);
+        }
+        return null;
+    }
+
+    /**
+     * 通过交易份额获取交易价格
+     * @param shares
+     * @return
+     */
+    @Override
+    public BigDecimal getTradePrice(String code,BigDecimal shares) {
+        //todo 先简单实现，后续再修改
+        HoldingDetails holdingDetails = getByCode(code);
+        return null;
     }
 }

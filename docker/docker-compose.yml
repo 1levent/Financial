@@ -1,86 +1,182 @@
 services:
-  financial-backend-nacos:
-    container_name: financial-backend-nacos
-    image: nacos/nacos-server
-    build:
-      context: ./nacos
-    environment:
-      - MODE=standalone
-    volumes:
-      - ./nacos/logs/:/home/nacos/logs
-      - ./nacos/conf/application.properties:/home/nacos/conf/application.properties
-    ports:
-      - "8848:8848"
-      - "9848:9848"
-      - "9849:9849"
-    depends_on:
-      - financial-backend-mysql
-  financial-backend-mysql:
-    container_name: financial-backend-mysql
-    image: mysql
-    build:
-      context: ./mysql
-    ports:
-      - "3307:3306"
-    volumes:
-      - ./mysql/conf:/etc/mysql/conf.d
-      - ./mysql/logs:/logs
-      - ./mysql/data:/var/lib/mysql
-    command: [
-          'mysqld',
-          '--innodb-buffer-pool-size=256M',
-          '--character-set-server=utf8mb4',
-          '--collation-server=utf8mb4_unicode_ci',
-          '--default-time-zone=+8:00',
-          '--lower-case-table-names=1'
-        ]
-    environment:
-      MYSQL_DATABASE: 'financial-backend'
-      MYSQL_ROOT_PASSWORD: wydxb030513
-      MYSQL_ROOT_HOST: '%'
-  financial-backend-redis:
-    container_name: financial-backend-redis
-    image: redis
-    build:
-      context: ./redis
-    ports:
-      - "6379:6379"
-    volumes:
-      - ./redis/conf/redis.conf:/home/financial-backend/redis/redis.conf
-      - ./redis/data:/data
-    command: redis-server /home/financial-backend/redis/redis.conf
+#  financial-backend-nacos:
+#    container_name: financial-backend-nacos
+#    image: nacos/nacos-server
+#    build:
+#      context: ./nacos
+#    environment:
+#      - MODE=standalone
+#    volumes:
+#      - ./nacos/logs/:/home/nacos/logs
+#      - ./nacos/conf/application.properties:/home/nacos/conf/application.properties
+#    ports:
+#      - "8848:8848"
+#      - "9848:9848"
+#      - "9849:9849"
+#    depends_on:
+#      - financial-backend-mysql
+#  financial-backend-mysql:
+#    container_name: financial-backend-mysql
+#    image: mysql
+#    build:
+#      context: ./mysql
+#    ports:
+#      - "3307:3306"
+#    volumes:
+#      - ./mysql/conf:/etc/mysql/conf.d
+#      - ./mysql/logs:/logs
+#      - ./mysql/data:/var/lib/mysql
+#    command: [
+#          'mysqld',
+#          '--innodb-buffer-pool-size=256M',
+#          '--character-set-server=utf8mb4',
+#          '--collation-server=utf8mb4_unicode_ci',
+#          '--default-time-zone=+8:00',
+#          '--lower-case-table-names=1'
+#        ]
+#    environment:
+#      MYSQL_DATABASE: 'financial-backend'
+#      MYSQL_ROOT_PASSWORD: wydxb030513
+#      MYSQL_ROOT_HOST: '%'
+#  financial-backend-redis:
+#    container_name: financial-backend-redis
+#    image: redis
+#    build:
+#      context: ./redis
+#    ports:
+#      - "6379:6379"
+#    volumes:
+#      - ./redis/conf/redis.conf:/home/financial-backend/redis/redis.conf
+#      - ./redis/data:/data
+#    command: redis-server /home/financial-backend/redis/redis.conf
+
 #  financial-backend-nginx:
 #    container_name: financial-backend-nginx
 #    image: nginx
 #    build:
 #      context: ./nginx
 #    ports:
-#      - "80:80"
+#      - "81:80"
 #    volumes:
-#      - ./nginx/html/dist:/home/financial-backend/projects/financial-backend-ui
+#      - ./nginx/html/dist:/usr/share/nginx/html
 #      - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf
 #      - ./nginx/logs:/var/log/nginx
 #      - ./nginx/conf.d:/etc/nginx/conf.d
 #    depends_on:
 #      - financial-backend-gateway
-  financial-backend-gateway:
-    container_name: financial-backend-gateway
-    build:
-      context: ./financial/gateway
-      dockerfile: dockerfile
+
+  financial-backend-rabbitmq:
+    container_name: financial-backend-rabbitmq
+    image: rabbitmq:management
     ports:
-      - "8080:8080"
-    depends_on:
-      - financial-backend-redis
-  financial-backend-auth:
-    container_name: financial-backend-auth
-    build:
-      context: ./financial/auth
-      dockerfile: dockerfile
-    ports:
-      - "9200:9200"
-    depends_on:
-      - financial-backend-redis
+      - "5672:5672"
+      - "15672:15672"
+      - "15674:15674"
+      - "15670:15670"
+      - "61613:61613"
+    environment:
+      TZ: Asia/Shanghai
+      RABBITMQ_DEFAULT_USER: xinyi
+      RABBITMQ_DEFAULT_PASS: 123456
+    volumes:
+      - ./rabbitmq/conf:/etc/rabbitmq
+      - ./rabbitmq/data:/var/lib/rabbitmq
+
+#  prometheus:
+#    image: prom/prometheus
+#    container_name: financial-backend-prometheus
+#    hostname: prometheus
+#    restart: always
+#    volumes:
+#      - ./prometheus/data/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+#    ports:
+#      - "9090:9090"
+#
+#  grafana:
+#    image: grafana/grafana
+#    container_name: financial-backend-grafana
+#    hostname: grafana
+#    restart: always
+#    ports:
+#      - "3000:3000"
+
+#  es8:
+#    image: elasticsearch:8.17.4
+#    container_name: financial-es8
+#    ports:
+#      - 9220:9200
+#      - 9300:9300
+#    environment:
+#      xpack.security.enabled: "false"
+#      discovery.type: "single-node" #单例模式
+#      ingest.geoip.downloader.enabled: "false"
+#      #锁定物理内存地址，防止es内存被交换出去，也就是避免es使用swap交换分区，频繁的交换，会导致IOPS变高
+#      bootstrap.memory_lock: "true"
+#      ES_JAVA_OPTS: "-Xms3g -Xmx3g" #堆内存大小，设置为彼此相等，不超过物理内存50%
+#      TZ: Asia/Shanghai
+#    ulimits:
+#      memlock:
+#        soft: -1
+#        hard: -1
+#    volumes:
+#      - ./elasticsearch/data:/usr/share/elasticsearch/data
+#
+#  skywalking-oap:
+#    image: apache/skywalking-oap-server
+#    container_name: financial-skywalking-oap
+#    restart: always
+#    depends_on:
+#      - es8
+#    links:
+#      - es8
+#    ports:
+#      - 11800:11800
+#      - 12800:12800
+#    environment:
+#      SW_CORE_RECORD_DATA_TTL: 7 #记录数据的有效期，单位天
+#      SW_CORE_METRICS_DATA_TTL: 7 #分析指标数据的有效期，单位天
+#      SW_ENABLE_UPDATE_UI_TEMPLATE: "true" # 开启dashboard编辑修改功能
+#      SW_HEALTH_CHECKER: default
+#      TZ: Asia/Shanghai
+#      SW_STORAGE: elasticsearch
+#      JAVA_OPTS: "-Xms2048m -Xmx2048m"
+#      SW_STORAGE_ES_CLUSTER_NODES: es8:9200
+##    volumes:
+##      - ./skywalking/config:/skywalking/config
+#
+#  skywalking-ui:
+#    image: apache/skywalking-ui
+#    container_name: financial-skywalking-ui
+#    restart: always
+#    depends_on:
+#      - skywalking-oap
+#    links:
+#      - skywalking-oap
+#    ports:
+#      - 8880:8080
+#    environment:
+#      TZ: Asia/Shanghai
+#      SW_HEALTH_CHECKER: default
+#      SW_OAP_ADDRESS: http://skywalking-oap:12800
+
+#  financial-backend-gateway:
+#    container_name: financial-backend-gateway
+#    build:
+#      context: ./financial/gateway
+#      dockerfile: dockerfile
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - financial-backend-redis
+#  financial-backend-auth:
+#    container_name: financial-backend-auth
+#    build:
+#      context: ./financial/auth
+#      dockerfile: dockerfile
+#    ports:
+#      - "9200:9200"
+#    depends_on:
+#      - financial-backend-redis
 #  financial-backend-modules-system:
 #    container_name: financial-backend-modules-system
 #    build:

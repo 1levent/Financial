@@ -165,6 +165,7 @@ public class SysLoginService {
     public String loginByWx(String userName) {
         LoginUser loginUser = remoteUserService.getUserInfo(userName, SecurityConstants.INNER).getData();
         Map<String, Object> map = tokenService.createToken(loginUser);
+
         return map.get("access_token").toString();
     }
 
@@ -207,6 +208,7 @@ public class SysLoginService {
         sysUser.setLoginType("1");
         sysUser.setUserName(thirdAccountId);
         sysUser.setNickName(thirdAccountId);
+        sysUser.setPassword(SecurityUtils.encryptPassword("123456"));
         remoteUserService.add(sysUser);
         LoginUser loginUser = remoteUserService.getByThirdAccountId(thirdAccountId).getData();
         return loginUser.getUsername();

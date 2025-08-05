@@ -185,18 +185,18 @@ public class SysUserController extends BaseController {
      * 根据用户编号获取详细信息
      */
     @Operation(summary = "根据用户编号获取详细信息")
-    @RequiresPermissions("system:user:query")
-    @GetMapping(value = { "/", "/{userId}" })
-    public AjaxResult getInfo(@PathVariable(value = "userId", required = false) Long userId) {
+//    @RequiresPermissions("system:user:query")
+    @GetMapping("/{userId}")
+    public AjaxResult getInfo(@PathVariable(value = "userId") Long userId) {
         AjaxResult ajax = AjaxResult.success();
         if (StringUtils.isNotNull(userId)) {
             userService.checkUserDataScope(userId);
             SysUser sysUser = userService.getById(userId);
             ajax.put(AjaxResult.DATA_TAG, sysUser);
-            ajax.put("roleIds", sysUser.getRoles().stream().map(SysRole::getRoleId).collect(Collectors.toList()));
+//            ajax.put("roleIds", sysUser.getRoles().stream().map(SysRole::getRoleId).collect(Collectors.toList()));
         }
-        List<SysRole> roles = roleService.list();
-        ajax.put("roles", SysUser.isAdmin(userId) ? roles : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
+//        List<SysRole> roles = roleService.list();
+//        ajax.put("roles", SysUser.isAdmin(userId) ? roles : roles.stream().filter(r -> !r.isAdmin()).collect(Collectors.toList()));
         return ajax;
     }
 

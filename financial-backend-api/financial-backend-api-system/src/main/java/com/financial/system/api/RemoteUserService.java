@@ -66,4 +66,6 @@ public interface RemoteUserService {
     public AjaxResult add(@Validated @RequestBody SysUser user);
 
     //根据id获取用户信息
+    @GetMapping("/{userId}")
+    public AjaxResult getInfo(@PathVariable(value = "userId") Long userId);
 }

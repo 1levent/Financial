@@ -1,0 +1,18 @@
+global:
+  # 全局默认抓取指标间隔
+  scrape_interval: 15s
+  # 告警规则评估间隔
+  evaluation_interval: 15s
+
+scrape_configs:
+  # prometheus自身配置
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['192.168.117.173:9090']
+  - job_name: 'financial'
+    # 5s获取一次数据
+    scrape_interval: 5s
+    # 接口地址固定
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['192.168.117.173:8081']

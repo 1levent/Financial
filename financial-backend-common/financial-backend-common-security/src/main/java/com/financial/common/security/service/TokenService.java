@@ -63,7 +63,8 @@ public class TokenService {
         // 接口返回信息
         Map<String, Object> rspMap = new HashMap<String, Object>();
         rspMap.put("access_token", JwtUtils.createToken(claimsMap));
-        rspMap.put("expires_in", expireTime);
+        rspMap.put("expires_in", expireTime*1000);
+        rspMap.put("user", loginUser.getSysUser());
         return rspMap;
     }
 

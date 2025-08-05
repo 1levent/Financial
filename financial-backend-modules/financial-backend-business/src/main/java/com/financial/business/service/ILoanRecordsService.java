@@ -5,7 +5,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.financial.business.entity.LoanRecords;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.financial.business.entity.dto.LoanRecordsDTO;
+import com.financial.business.entity.dto.statistic.LoanStatisticDTO;
 import jakarta.servlet.http.HttpServletResponse;
+import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * <p>
@@ -20,4 +23,8 @@ public interface ILoanRecordsService extends IService<LoanRecords> {
   public IPage<LoanRecordsDTO> list(LoanRecordsDTO dto, Page<LoanRecords> page);
 
   void export(LoanRecordsDTO loanRecordsDTO, HttpServletResponse response);
+
+  BigDecimal calculateTotalInterest(LoanRecordsDTO loanRecordsDTO);
+
+  LoanStatisticDTO calculateLoanStatistics(List<LoanRecords> list);
 }

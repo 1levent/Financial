@@ -11,9 +11,9 @@
     <modules>
         <module>financial-backend-system</module>
         <module>financial-backend-gen</module>
-        <module>financial-backend-job</module>
         <module>financial-backend-file</module>
         <module>financial-backend-business</module>
+        <module>xxl-job</module>
     </modules>
 
     <artifactId>financial-modules</artifactId>

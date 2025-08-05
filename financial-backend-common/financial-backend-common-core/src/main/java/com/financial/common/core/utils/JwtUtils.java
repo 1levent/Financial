@@ -11,6 +11,7 @@ import com.financial.common.core.constant.SecurityConstants;
 import com.financial.common.core.constant.TokenConstants;
 import com.financial.common.core.text.Convert;
 import javax.crypto.SecretKey;
+import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 
 /**
  * Jwt工具类
@@ -29,7 +30,7 @@ public class JwtUtils {
     public static String createToken(Map<String, Object> claims) {
         return JWT.create()
             .withPayload(claims)
-            .withExpiresAt(new Date(System.currentTimeMillis()+3600_000))
+            .withExpiresAt(new Date(System.currentTimeMillis() + 12 * 3600_000))
             .sign(getAlgorithm(secret));
     }
 
@@ -51,8 +52,8 @@ public class JwtUtils {
      * @return 用户ID
      */
     public static String getUserKey(String token) {
-        DecodedJWT jwt= parseToken(token);
-        return jwt.getClaim(SecurityConstants.USER_KEY).toString();
+        DecodedJWT jwt = parseToken(token);
+        return getValue(jwt, SecurityConstants.USER_KEY);
     }
 
     /**
@@ -112,7 +113,12 @@ public class JwtUtils {
      */
     public static String getValue(DecodedJWT jwt, String key) {
         Claim claim = jwt.getClaim(key);
-        return claim.isNull() ? "" : Convert.toStr(claim.asString());
+        if(claim == null){
+            return "";
+        }
+        // 直接提取原始对象，由Hutool处理类型转换
+        Object rawValue = claim.as(Object.class);
+        return Convert.toStr(rawValue, "");
     }
 
     /**

@@ -1,5 +1,6 @@
 package com.xxl.job.admin.controller;
 
+import com.xxl.job.admin.controller.annotation.PermissionLimit;
 import com.xxl.job.admin.controller.interceptor.PermissionInterceptor;
 import com.xxl.job.admin.core.exception.XxlJobException;
 import com.xxl.job.admin.core.model.XxlJobGroup;
@@ -22,6 +23,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -160,5 +162,51 @@ public class JobInfoController {
 		return new ReturnT<List<String>>(result);
 
 	}
-	
+
+
+	/*------------------自定义方法----------------------  */
+	@RequestMapping("/addJob")
+	@ResponseBody
+	@PermissionLimit(limit = false)
+	public ReturnT<String> addJobInfo(@RequestBody XxlJobInfo jobInfo) {
+		return xxlJobService.add(jobInfo, null);
+	}
+
+	@RequestMapping("/updateJob")
+	@ResponseBody
+	@PermissionLimit(limit = false)
+	public ReturnT<String> updateJobCron(@RequestBody XxlJobInfo jobInfo) {
+		return xxlJobService.update(jobInfo,null);
+	}
+
+	@RequestMapping("/removeJob")
+	@ResponseBody
+	@PermissionLimit(limit = false)
+	public ReturnT<String> removeJob(@RequestBody XxlJobInfo jobInfo) {
+		return xxlJobService.remove(jobInfo.getId());
+	}
+
+	@RequestMapping("/pauseJob")
+	@ResponseBody
+	@PermissionLimit(limit = false)
+	public ReturnT<String> pauseJob(@RequestBody XxlJobInfo jobInfo) {
+		return xxlJobService.stop(jobInfo.getId());
+	}
+
+	@RequestMapping("/startJob")
+	@ResponseBody
+	@PermissionLimit(limit = false)
+	public ReturnT<String> startJob(@RequestBody XxlJobInfo jobInfo) {
+		return xxlJobService.start(jobInfo.getId());
+	}
+
+	@RequestMapping("/addAndStart")
+	@ResponseBody
+	@PermissionLimit(limit = false)
+	public ReturnT<String> addAndStart(@RequestBody XxlJobInfo jobInfo) {
+		ReturnT<String> result = xxlJobService.add(jobInfo, null);
+		int id = Integer.valueOf(result.getContent());
+		xxlJobService.start(id);
+		return result;
+	}
 }

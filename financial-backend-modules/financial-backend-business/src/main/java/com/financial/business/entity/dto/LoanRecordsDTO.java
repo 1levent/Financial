@@ -24,8 +24,8 @@ public class LoanRecordsDTO {
     @Schema(description="借贷名称")
     private String loanName;
 
-    @Schema(description="借贷类型编码")
-    private Long loanTypeCode;
+    @Schema(description="借贷类型")
+    private String type;
 
     @Schema(description="本金")
     private BigDecimal principal;
@@ -39,6 +39,6 @@ public class LoanRecordsDTO {
     @Schema(description="总利息")
     private BigDecimal totalInterest;
 
-    @Schema(description="状态代码")
-    private Long statusCode;
+    @Schema(description="状态")
+    private String status;
 }

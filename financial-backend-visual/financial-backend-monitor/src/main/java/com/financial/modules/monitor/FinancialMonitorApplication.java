@@ -2,14 +2,13 @@ package com.financial.modules.monitor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import de.codecentric.boot.admin.server.config.EnableAdminServer;
 
 /**
  * 监控中心
  * 
  * @author xinyi
  */
-@EnableAdminServer
+//@EnableAdminServer
 @SpringBootApplication
 public class FinancialMonitorApplication {
     public static void main(String[] args) {

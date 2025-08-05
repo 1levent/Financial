@@ -36,20 +36,32 @@ public class IncomeExpenseRecords extends BaseEntity {
     @Schema(description="用户ID")
     private Long userId;
 
-    @Schema(description="类型编码")
-    private Long typeCode;
+    @Schema(description="账户ID")
+    private String accountId;
+
+    @Schema(description="预算ID")
+    private String budgetId;
+
+    @Schema(description="类型")
+    private String type;
 
     @Schema(description="金额")
     private BigDecimal amount;
 
     @Schema(description="分类")
-    private Long categoryCode;
+    private String category;
 
     @Schema(description="日期")
     private LocalDate date;
 
     @Schema(description="描述")
     private String description;
+
+    @Schema(description="借贷记录ID")
+    private Long loanId;
+
+    @Schema(description="目标ID")
+    private Long goalId;
 
     @Schema(description="逻辑删除")
     private boolean deleted;

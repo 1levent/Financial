@@ -7,7 +7,9 @@ import com.financial.common.core.web.domain.BaseEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serial;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -35,11 +37,14 @@ public class TransactionRecords extends BaseEntity {
     @Schema(description="用户ID")
     private Long userId;
 
+    @Schema(description="账户编号")
+    private String accountNo;
+
     @Schema(description="资产代码")
     private String assetCode;
 
-    @Schema(description="交易类型编码")
-    private Long typeCode;
+    @Schema(description="交易类型")
+    private String type;
 
     @Schema(description="交易份额")
     private BigDecimal shares;
@@ -51,5 +56,5 @@ public class TransactionRecords extends BaseEntity {
     private BigDecimal fee;
 
     @Schema(description="交易时间")
-    private LocalDateTime transactionTime;
+    private LocalDate transactionTime;
 }

@@ -1,20 +1,21 @@
 package com.financial.business.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.financial.business.entity.HoldingDetails;
 import com.financial.business.entity.TransactionRecords;
 import com.financial.business.entity.conveter.TransactionRecordsStructMapper;
 import com.financial.business.entity.dto.TransactionRecordsDTO;
+import com.financial.business.service.IHoldingDetailsService;
 import com.financial.business.service.ITransactionRecordsService;
+import com.financial.common.core.domain.R;
+import com.financial.common.core.utils.StringUtils;
 import com.financial.common.core.utils.excel.ExcelUtils;
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
 import com.financial.common.core.web.page.PageResponse;
-import com.financial.common.core.web.page.TableDataInfo;
 import com.financial.common.log.annotation.Log;
 import com.financial.common.log.enums.BusinessType;
-import com.financial.common.security.annotation.RequiresPermissions;
 import com.financial.common.security.utils.SecurityUtils;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -26,7 +27,6 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * <p>
@@ -46,6 +46,9 @@ public class TransactionRecordsController extends BaseController {
 
     @Resource
     private TransactionRecordsStructMapper transactionRecordsStructMapper;
+
+    @Resource
+    private IHoldingDetailsService holdingDetailsService;
 
     /**
      * 获取交易记录列表
@@ -80,8 +83,13 @@ public class TransactionRecordsController extends BaseController {
     @Operation(summary = "根据交易记录编号获取详细信息")
 //    @RequiresPermissions("business:transactionRecords:query")
     @GetMapping(value = "/{id}")
-    public AjaxResult getInfo(@PathVariable Long id) {
-        return success(transactionRecordsService.getById(id));
+    public R<TransactionRecordsDTO> getInfo(@PathVariable Long id) {
+        TransactionRecords transactionRecords = transactionRecordsService.getById(id);
+        if (transactionRecords == null) {
+            return R.fail("该记录不存在");
+        }
+        TransactionRecordsDTO transactionRecordsDTO = transactionRecordsStructMapper.toDto(transactionRecords);
+        return R.ok(transactionRecordsDTO);
     }
 
     /**
@@ -94,7 +102,12 @@ public class TransactionRecordsController extends BaseController {
     public AjaxResult add(@Validated @RequestBody TransactionRecordsDTO transactionRecordsDTO) {
         transactionRecordsDTO.setUserId(SecurityUtils.getUserId());
         TransactionRecords transactionRecords = transactionRecordsStructMapper.toEntity(transactionRecordsDTO);
-        return toAjax(transactionRecordsService.save(transactionRecords));
+        //在保存交易记录之前，要先同步修改持仓明细表的持仓金额
+        String productCode = transactionRecordsDTO.getAssetCode();
+        if(StringUtils.isEmpty(productCode)){
+            return AjaxResult.warn("交易记录产品代码不能为空");
+        }
+        return transactionRecordsService.saveTransaction(transactionRecordsDTO);
     }
 
     /**

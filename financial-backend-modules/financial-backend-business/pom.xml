@@ -11,6 +11,7 @@
 
   <artifactId>financial-modules-business</artifactId>
 
+
   <description>
     financial-backend 业务模块
   </description>
@@ -85,6 +86,70 @@
         <groupId>org.apache.velocity</groupId>
         <artifactId>velocity-engine-core</artifactId>
       </dependency>
+
+      <dependency>
+        <groupId>cn.idev.excel</groupId>
+        <artifactId>fastexcel</artifactId>
+      </dependency>
+
+    <!-- skywalking -->
+    <!-- 获取链路traceId -->
+    <dependency>
+      <groupId>org.apache.skywalking</groupId>
+      <artifactId>apm-toolkit-trace</artifactId>
+    </dependency>
+
+    <!-- 自定义tag -->
+    <dependency>
+      <groupId>org.apache.skywalking</groupId>
+      <artifactId>apm-toolkit-opentracing</artifactId>
+    </dependency>
+
+    <!-- skywalking日志记录 -->
+    <dependency>
+      <groupId>org.apache.skywalking</groupId>
+      <artifactId>apm-toolkit-logback-1.x</artifactId>
+    </dependency>
+
+
+    <!-- xxl-job-core -->
+    <dependency>
+      <groupId>com.xuxueli</groupId>
+      <artifactId>xxl-job-core</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+    <!-- mq   -->
+    <dependency>
+      <groupId>com.financial</groupId>
+      <artifactId>financial-common-mq</artifactId>
+      <version>3.6.5</version>
+    </dependency>
+
+
+    <!-- 核心邮件依赖 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-mail</artifactId>
+    </dependency>
+
+<!--    &lt;!&ndash; HTML模板支持（可选） &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-thymeleaf</artifactId>-->
+<!--    </dependency>-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-freemarker</artifactId>
+      <version>3.4.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.ben-manes.caffeine</groupId>
+      <artifactId>caffeine</artifactId>
+      <version>3.2.0</version>
+    </dependency>
+
   </dependencies>
 
   <build>

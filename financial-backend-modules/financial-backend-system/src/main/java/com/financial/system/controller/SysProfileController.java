@@ -1,10 +1,13 @@
 package com.financial.system.controller;
 
+import com.financial.common.redis.service.RedisService;
+import com.financial.system.domain.vo.ProfileVo;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import java.util.Arrays;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -46,18 +49,31 @@ public class SysProfileController extends BaseController {
     
     @Resource
     private RemoteFileService remoteFileService;
+    @Autowired
+    private RedisService redisService;
 
     /**
      * 个人信息
      */
     @Operation(summary = "个人信息")
     @GetMapping
-    public AjaxResult profile() {
+    public R<ProfileVo> profile() {
         String username = SecurityUtils.getUsername();
+        if(StringUtils.isEmpty(username)){
+            //测试
+            username = "ouWtV6ds3874I0_dGZ_iZV8BN_y4";
+        }
         SysUser user = userService.selectUserByUserName(username);
-        AjaxResult ajax = AjaxResult.success(user);
-        ajax.put("roleGroup", userService.selectUserRoleGroup(username));
-        return ajax;
+
+        ProfileVo profileVo = new ProfileVo();
+        profileVo.setUserId(user.getUserId());
+        profileVo.setUserName(user.getUserName());
+        profileVo.setNickName(user.getNickName());
+        profileVo.setPhonenumber(user.getPhonenumber());
+        profileVo.setEmail(user.getEmail());
+        profileVo.setAvatar(user.getAvatar());
+        profileVo.setSex(user.getSex());
+        return R.ok(profileVo);
     }
 
     /**
@@ -66,14 +82,23 @@ public class SysProfileController extends BaseController {
     @Operation(summary = "修改用户")
     @Log(title = "个人信息", businessType = BusinessType.UPDATE)
     @PutMapping
-    public AjaxResult updateProfile(@RequestBody SysUser user) {
-        LoginUser loginUser = SecurityUtils.getLoginUser();
-        SysUser currentUser = loginUser.getSysUser();
+    public AjaxResult updateProfile(@RequestBody ProfileVo user) {
+        System.out.println("用户token："+ SecurityUtils.getToken());
+        System.out.println("用户key："+ SecurityUtils.getUserKey());
+//        LoginUser loginUser = SecurityUtils.getLoginUser();
+      LoginUser loginUser = redisService.getCacheObject(
+          "login_tokens:" + SecurityUtils.getUserKey());
+      if (loginUser == null) {
+          return error("登录状态已过期");
+      }
+      System.out.println("用户信息："+loginUser);
+      SysUser currentUser = loginUser.getSysUser();
         currentUser.setNickName(user.getNickName());
         currentUser.setEmail(user.getEmail());
         currentUser.setPhonenumber(user.getPhonenumber());
         currentUser.setSex(user.getSex());
         if (StringUtils.isNotEmpty(user.getPhonenumber()) && !userService.checkPhoneUnique(currentUser)) {
+            System.out.println("手机号重复");
             return error("修改用户'" + loginUser.getUsername() + "'失败，手机号码已存在");
         }
         if (StringUtils.isNotEmpty(user.getEmail()) && !userService.checkEmailUnique(currentUser)) {
@@ -93,7 +118,7 @@ public class SysProfileController extends BaseController {
     @Operation(summary = "重置密码")
     @Log(title = "个人信息", businessType = BusinessType.UPDATE)
     @PutMapping("/updatePwd")
-    public AjaxResult updatePwd(String oldPassword, String newPassword) {
+    public AjaxResult updatePwd(@RequestParam("oldPassword")String oldPassword,@RequestParam("newPassword") String newPassword) {
         String username = SecurityUtils.getUsername();
         SysUser user = userService.selectUserByUserName(username);
         String password = user.getPassword();

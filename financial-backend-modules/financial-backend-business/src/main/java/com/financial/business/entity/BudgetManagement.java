@@ -37,14 +37,14 @@ public class BudgetManagement extends BaseEntity {
     @Schema(description="预算名称")
     private String name;
 
-    @Schema(description="预算类型编码")
-    private Long typeCode;
+    @Schema(description="预算类型")
+    private String type;
 
     @Schema(description="预算金额")
     private BigDecimal budgetAmount;
 
     @Schema(description="预算周期")
-    private String periodCode;
+    private String period;
 
     @Schema(description="预警阈值（百分比）")
     private BigDecimal warningThreshold;
@@ -54,5 +54,11 @@ public class BudgetManagement extends BaseEntity {
 
     @Schema(description="是否启用")
     private Byte enabled;
+
+    @Schema(description="已使用金额")
+    private BigDecimal usedAmount;
+
+    @Schema(description="使用率")
+    private BigDecimal usageRate;
 
 }

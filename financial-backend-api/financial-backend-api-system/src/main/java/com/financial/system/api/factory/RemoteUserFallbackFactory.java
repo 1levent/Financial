@@ -50,6 +50,10 @@ public class RemoteUserFallbackFactory implements FallbackFactory<RemoteUserServ
             public AjaxResult add(SysUser user){
                 return AjaxResult.error("新增用户失败:" + throwable.getMessage());
             }
+            @Override
+            public AjaxResult getInfo(Long userId){
+                return AjaxResult.error("获取用户失败:" + throwable.getMessage());
+            }
         };
     }
 }

@@ -19,22 +19,20 @@ public class BudgetManagementDTO {
     @Schema(description = "预算ID")
     private Long id;
 
-
     @Schema(description = "用户id")
     private Long userId;
 
     @Schema(description = "预算名称")
     private String name;
 
-    @Schema(description = "预算类型编码")
-    @Dict(type = "budget_type")
-    private Long typeCode;
+    @Schema(description = "预算类型")
+    private String type;
 
     @Schema(description = "预算金额")
     private BigDecimal budgetAmount;
 
     @Schema(description = "预算周期")
-    private String periodCode;
+    private String period;
 
     @Schema(description = "预警阈值（百分比）")
     private BigDecimal warningThreshold;
@@ -47,5 +45,11 @@ public class BudgetManagementDTO {
 
     @Schema(description = "预算ID集合")
     private List<Long> ids;
+
+    @Schema(description="已使用金额")
+    private BigDecimal usedAmount;
+
+    @Schema(description="使用率")
+    private BigDecimal usageRate;
 
 }

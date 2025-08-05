@@ -53,7 +53,8 @@ public class CodeGenerator {
                 .pathInfo(Collections.singletonMap(OutputFile.xml, "financial-backend-modules\\financial-backend-business\\src\\main\\resources\\mapper\\business")) // 设置mapperXml生成路径
         )
         .strategyConfig(builder ->
-            builder.addInclude(businessTables) // 设置需要生成的表名
+            //businessTables
+            builder.addInclude("account") // 设置需要生成的表名
                 .addTablePrefix("t_", "c_") // 设置过滤表前缀
         )
         .execute();

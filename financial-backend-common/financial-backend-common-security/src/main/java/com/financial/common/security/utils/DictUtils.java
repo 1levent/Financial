@@ -1,6 +1,5 @@
 package com.financial.common.security.utils;
 
-import com.financial.system.api.RemoteDictService;
 import java.util.Collection;
 import java.util.List;
 import com.alibaba.fastjson2.JSONArray;
@@ -83,18 +82,18 @@ public class DictUtils {
                 }
             }
         }
-        //调用远程服务
-        List<SysDictData> sysDictDataList = SpringUtils.getBean(RemoteDictService.class).dictType(dictType).getData();
-        if (StringUtils.isNotEmpty(sysDictDataList)) {
-            for (SysDictData dict : sysDictDataList) {
-                if (dictValue.equals(dict.getDictValue())) {
-                    //设置到redis中
-                    setDictCache(dictType, sysDictDataList);
-                    System.out.println("调用远程服务获取的字典："+dict.getDictLabel());
-                    return dict.getDictLabel();
-                }
-            }
-        }
+//        //调用远程服务
+//        List<SysDictData> sysDictDataList = SpringUtils.getBean(RemoteDictService.class).dictType(dictType).getData();
+//        if (StringUtils.isNotEmpty(sysDictDataList)) {
+//            for (SysDictData dict : sysDictDataList) {
+//                if (dictValue.equals(dict.getDictValue())) {
+//                    //设置到redis中
+//                    setDictCache(dictType, sysDictDataList);
+//                    System.out.println("调用远程服务获取的字典："+dict.getDictLabel());
+//                    return dict.getDictLabel();
+//                }
+//            }
+//        }
         return null;
     }
 }

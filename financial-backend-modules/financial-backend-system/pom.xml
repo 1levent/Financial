@@ -88,6 +88,24 @@
             <artifactId>velocity-engine-core</artifactId>
         </dependency>
 
+        <!-- skywalking -->
+        <!-- 获取链路traceId -->
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-trace</artifactId>
+        </dependency>
+
+        <!-- 自定义tag -->
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-opentracing</artifactId>
+        </dependency>
+
+        <!-- skywalking日志记录 -->
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-logback-1.x</artifactId>
+        </dependency>
 
     </dependencies>
 

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
+
+  ck
+
+
     <!-- 日志存放路径 -->
 	<property name="log.path" value="logs/financial-backend-visual-monitor" />
    <!-- 日志输出格式 -->

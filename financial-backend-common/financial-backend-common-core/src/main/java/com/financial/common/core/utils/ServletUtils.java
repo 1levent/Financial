@@ -267,14 +267,16 @@ public class ServletUtils {
      * 设置webflux模型响应
      *
      * @param response ServerHttpResponse
-     * @param code 响应状态码
-     * @param value 响应内容
+     * @param httpStatus http状态码
      * @return Mono<Void>
      */
-    public static Mono<Void> webFluxResponseWriter(ServerHttpResponse response, Object value, int code)
-    {
-        return webFluxResponseWriter(response, HttpStatus.OK, value, code);
+    // 原方法改造（推荐）
+    public static Mono<Void> webFluxResponseWriter(ServerHttpResponse response,
+        HttpStatus httpStatus,
+        String message) {
+        return webFluxResponseWriter(response, httpStatus, message, httpStatus.value());
     }
+
 
     /**
      * 设置webflux模型响应

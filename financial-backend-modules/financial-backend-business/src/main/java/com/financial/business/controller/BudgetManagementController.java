@@ -6,6 +6,7 @@ import com.financial.business.entity.BudgetManagement;
 import com.financial.business.entity.conveter.BudgetManagementStructMapper;
 import com.financial.business.entity.dto.BudgetManagementDTO;
 import com.financial.business.service.IBudgetManagementService;
+import com.financial.common.core.domain.R;
 import com.financial.common.core.web.controller.BaseController;
 import com.financial.common.core.web.domain.AjaxResult;
 import com.financial.common.core.web.page.PageResponse;
@@ -15,6 +16,7 @@ import com.financial.common.security.utils.SecurityUtils;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -61,9 +63,9 @@ public class BudgetManagementController extends BaseController {
     @Operation(summary = "根据预算编号获取详细信息")
 //    @RequiresPermissions("business:budgetManagement:query")
     @GetMapping(value = "/{id}")
-    public AjaxResult getInfo(@PathVariable Long id) {
+    public R<BudgetManagementDTO> getInfo(@PathVariable Long id) {
         BudgetManagementDTO budgetManagementDTO = budgetManagementStructMapper.toDto(budgetManagementService.getById(id));
-        return success(budgetManagementDTO);
+        return R.ok(budgetManagementDTO);
     }
 
     /**
@@ -76,6 +78,8 @@ public class BudgetManagementController extends BaseController {
     public AjaxResult add(@Validated @RequestBody BudgetManagementDTO budgetManagementDTO) {
         budgetManagementDTO.setUserId(SecurityUtils.getUserId());
         BudgetManagement budgetManagement = budgetManagementStructMapper.toEntity(budgetManagementDTO);
+        budgetManagement.setUsedAmount(BigDecimal.ZERO);
+        budgetManagement.setUsageRate(BigDecimal.ZERO);
         return toAjax(budgetManagementService.save(budgetManagement));
     }
 

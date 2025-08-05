@@ -62,10 +62,16 @@ public class XxlJobServiceImpl implements XxlJobService {
 
 	@Override
 	public ReturnT<String> add(XxlJobInfo jobInfo, XxlJobUser loginUser) {
-
+		System.out.println("传入的jobInfo：");
+		//打印jobInfo
+		System.out.println("jobInfo:"+jobInfo.getAuthor());
+		System.out.println("进入内部方法");
+		System.out.println("jobGroup:"+jobInfo.getJobGroup());
 		// valid base
 		XxlJobGroup group = xxlJobGroupDao.load(jobInfo.getJobGroup());
+		System.out.println("jobGroup");
 		if (group == null) {
+			System.out.println("jobGroup为空");
 			return new ReturnT<String>(ReturnT.FAIL_CODE, (I18nUtil.getString("system_please_choose")+I18nUtil.getString("jobinfo_field_jobgroup")) );
 		}
 		if (jobInfo.getJobDesc()==null || jobInfo.getJobDesc().trim().length()==0) {

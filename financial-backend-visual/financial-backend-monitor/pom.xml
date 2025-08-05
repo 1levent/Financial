@@ -16,12 +16,12 @@
 
     <dependencies>
         
-        <!-- SpringBoot Admin -->
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-server</artifactId>
-            <version>${spring-boot-admin.version}</version>
-        </dependency>
+<!--        &lt;!&ndash; SpringBoot Admin &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>de.codecentric</groupId>-->
+<!--            <artifactId>spring-boot-admin-starter-server</artifactId>-->
+<!--            <version>${spring-boot-admin.version}</version>-->
+<!--        </dependency>-->
 		
         <!-- SpringCloud Alibaba Nacos -->
         <dependency>
@@ -51,6 +51,25 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- skywalking -->
+        <!-- 获取链路traceId -->
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-trace</artifactId>
+        </dependency>
+
+        <!-- 自定义tag -->
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-opentracing</artifactId>
+        </dependency>
+
+        <!-- skywalking日志记录 -->
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-logback-1.x</artifactId>
         </dependency>
 		
     </dependencies>
